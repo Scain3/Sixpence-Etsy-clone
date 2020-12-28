@@ -1,8 +1,7 @@
-function ShoppingCart(){
-
+function ShoppingCartIcon(){
     return(
         <i className="fas fa-shopping-cart"></i>
     )
 }
 
-export default ShoppingCart;
+export default ShoppingCartIcon;

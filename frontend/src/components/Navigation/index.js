@@ -5,7 +5,7 @@ import ProfileButton from './ProfileButton';
 import LoginFormModal from '../LoginFormModal';
 import './Navigation.css';
 import SearchBar from '../Search/SearchBar';
-import ShoppingCart from '../Cart/ShoppingCart';
+import ShoppingCartIcon from '../Cart/ShoppingCartIcon';
 
 function Navigation({ isLoaded }){
   const sessionUser = useSelector(state => state.session.user);
@@ -15,7 +15,7 @@ function Navigation({ isLoaded }){
     sessionLinks = (
       <>
         <ProfileButton user={sessionUser} />
-        <ShoppingCart />
+        <ShoppingCartIcon />
       </>
     );
   } else {
