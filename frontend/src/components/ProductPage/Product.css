@@ -1,0 +1,72 @@
+.productContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+
+  .images{
+      height: 200px;
+      width: 200px;
+      margin: 15px;
+  }
+
+  .description{
+    display: flex;
+    align-items: flex-start;
+    width: 800px;
+  }
+
+  p{
+    display: flex;
+    text-align: left;
+    font-size: 20px;
+  }
+
+  .single-image{
+    height: 400px;
+    width: 400px;
+  }
+
+  .image-block{
+    display: block;
+    flex-direction: vertical;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .createFormContainer{
+    display: flex;
+    border: 3px solid black;
+    border-radius: 40px;
+    background-color: aliceblue;
+    width: 500px;
+    height: 500px;
+    margin: auto;
+  }
+
+  .createForm{
+    display: block;
+    margin: 100px;
+    justify-content: space-between;
+  }
+
+  .createInputs{
+    margin: 20px;
+    justify-content: center;
+    height: 30px;
+    top: 30px;
+  }
+
+  .createDescription{
+    margin: 20px;
+    justify-content: center;
+    height: 50px;
+    width: 250px;
+  }
+
+  .createButton{
+    margin: 20px;
+    height: 30px;
+    line-height: 25px;
+  }
