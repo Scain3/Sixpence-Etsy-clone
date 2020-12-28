@@ -12,7 +12,8 @@ li{
   color: #222222;
   font-size: 16px;
   line-height: 28px;
-  height: 48px;
+  height: 40px;
+  outline: none;
 }
 
 .search input{
@@ -44,9 +45,9 @@ li{
   color: #36454F;
 }
 
-.navbar{
+.auth-links{
   display: flex;
-  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .sign-in{
@@ -111,4 +112,9 @@ border-radius: 5px;
 
 .link:hover{
   background-color: aliceblue;
+}
+
+.navbar{
+  display: flex;
+  justify-content: space-between;
 }
