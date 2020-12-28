@@ -26,6 +26,7 @@ function Productpage(){
                     <div className="image-block">
                         <img className="images" src={productItem.image} alt={productItem.title} onClick={()=> history.push(`/product/${productItem.id}`)} />
                         <h4>${productItem.price}</h4>
+                        <button>Add To Cart</button>
                     </div>
                 </div>
              ))}
