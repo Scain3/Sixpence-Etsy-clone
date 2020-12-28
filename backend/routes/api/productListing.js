@@ -9,3 +9,5 @@ router.get('/', asyncHandler(async(req, res)=> {
         product: productItem,
     })
 }));
+
+module.exports = router;

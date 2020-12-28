@@ -14,7 +14,7 @@ function Productpage(){
 
     useEffect(() => {
             dispatch(fetchProducts());
-    }, [])
+    }, [dispatch])
 
 
 
