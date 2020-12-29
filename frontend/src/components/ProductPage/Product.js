@@ -2,6 +2,7 @@ import { useEffect } from "react";
 // import * as productActions from "../../store/product";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
+import { addItem } from "../../store/cart";
 import { fetchProducts } from '../../store/product';
 import './Product.css';
 
@@ -16,6 +17,10 @@ function Productpage(){
             dispatch(fetchProducts());
     }, [dispatch])
 
+    const handleClick = (e) => {
+        e.preventDefault()
+        dispatch(addItem(products.id))
+    }
 
 
     return(
@@ -26,7 +31,7 @@ function Productpage(){
                     <div className="image-block">
                         <img className="images" src={productItem.image} alt={productItem.title} onClick={()=> history.push(`/product/${productItem.id}`)} />
                         <h4>${productItem.price}</h4>
-                        <button>Add To Cart</button>
+                        <button onClick={handleClick}>Add To Cart</button>
                     </div>
                 </div>
              ))}
