@@ -4,9 +4,13 @@ const ADD_ITEM = '/cart/ADD_ITEM';
 
 const PURCHASE_ITEMS = '/CART/PURCHASE_ITEMS';
 
-export const addItem = (id) => async(dispatch) => {
-    const response = await fetch("/api")
+const addToCart = (id) => {
     return {type: ADD_ITEM, payload: id}
+}
+
+export const addItem = (id) => async(dispatch) => {
+    const response = await fetch("/api/cart/${id}");
+    dispatch(addToCart(response.data.cartItem));
 }
 
 export const purchaseItems = (id) => {
@@ -16,9 +20,7 @@ export const purchaseItems = (id) => {
 const cartReducer = (state={}, action) => {
     switch(action.type){
         case ADD_ITEM:
-            const oldItem = state[action.payload]
-            const newObj = {...state, [action.payload]: { id: action.payload, count: oldItem ? oldItem.count + 1 : 1 }}
-            return newObj;
+            return [action.payload];
         case PURCHASE_ITEMS:
             return {};
         default:
