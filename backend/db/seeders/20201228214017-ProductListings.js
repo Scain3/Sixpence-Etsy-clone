@@ -2,24 +2,24 @@
 const { User } = require("../models");
 module.exports = {
   up: async(queryInterface, Sequelize) => {
-    const user1 = await User.findOne({
+    const seller1 = await User.findOne({
       where: {
         username: 'Demo-lition'
       }
     })
-    const user2 = await User.findOne({
+    const seller2 = await User.findOne({
       where: {
         username: 'FakeUser1'
       }
     })
-    const user3 = await User.findOne({
+    const seller3 = await User.findOne({
       where: {
         username: 'FakeUser2'
       }
     })
    return queryInterface.bulkInsert('ProductListings', [
      {
-       userId: user1.id,
+       sellerId: seller1.id,
        title: 'Raindrops on Roses',
        description: `Celebrate your autumn wedding with beautiful red roses.
        Roses are indeed the best flower for an autumn wedding as these bouquets stay absolutely perfect
@@ -31,7 +31,7 @@ module.exports = {
        updatedAt: new Date()
      },
      {
-      userId: user2.id,
+      sellerId: seller2.id,
       title: 'Unveil the Bride: As seen on Project Runway',
       description: `I wore this veil to my own wedding and I never thought I could feel so beautiful.
                     Everyone said I looked just like a run-way model. Now I'm happy to re-sale this used
@@ -43,7 +43,7 @@ module.exports = {
        updatedAt: new Date()
      },
      {
-      userId: user3.id,
+      sellerId: seller3.id,
       title: 'Vintage Inspired Gown',
       description: `This Natalie Wood inspired wedding gown is a dream. As a fashion design student,
               it has always been my dream to create 1960s vintage-inspired wedding gowns. Only my
@@ -56,7 +56,7 @@ module.exports = {
        updatedAt: new Date()
      },
      {
-      userId: user1.id,
+      sellerId: seller1.id,
       title: 'Victorian Wedding Gown',
       description: `I've decided it's time to put my wedding dress on the market.
                     My daughter is getting married and has politely disclosed to me
@@ -68,7 +68,7 @@ module.exports = {
       updatedAt: new Date()
     },
     {
-     userId: user2.id,
+     sellerId: seller2.id,
      title: 'Doggy Bride',
      description: `My beautful pup is all grown up now and has now celebrated
                   her wedding day. She is now no longer in need of this veil so
@@ -79,7 +79,7 @@ module.exports = {
       updatedAt: new Date()
     },
     {
-     userId: user3.id,
+     sellerId: seller3.id,
      title: 'Twirl Ready Gown',
      description: `This gown means a lot to me as it was the first wedding gown I ever designed
                     in fashion school. I entered in as a sample for my work at Project Runway
@@ -91,7 +91,7 @@ module.exports = {
       updatedAt: new Date()
     },
     {
-      userId: user1.id,
+      sellerId: seller1.id,
       title: 'Blue Bridesmaids Gown',
       description: `Pick a gown your bridesmaids will love and get your
                   "Something Blue" as well. They'll be twirl ready in no time.`,
@@ -101,7 +101,7 @@ module.exports = {
       updatedAt: new Date()
     },
     {
-     userId: user2.id,
+     sellerId: seller2.id,
      title: 'Your Something Borrowed',
      description: `I'm not ready to part with my wedding gown but I'm
                   wlling to rent out to an interested bride for greatly
@@ -113,7 +113,7 @@ module.exports = {
       updatedAt: new Date()
     },
     {
-     userId: user3.id,
+     sellerId: seller3.id,
      title: 'Diamond Saphire Necklace',
      description: `This diamond saphire necklace is a part of the Something Borrowed exchange program.
                     Every bride needs something fabulous on their wedding day so I'm loaning this one out
@@ -125,7 +125,7 @@ module.exports = {
       updatedAt: new Date()
     },
     {
-      userId: user1.id,
+      sellerId: seller1.id,
       title: 'Sunflower Bouquet',
       description: `I've arranged this bouquet to match a bride with spunk and personality.
                     If these seem like your perfect fit please continue to purchase.`,
@@ -135,7 +135,7 @@ module.exports = {
       updatedAt: new Date()
     },
     {
-     userId: user2.id,
+     sellerId: seller2.id,
      title: 'Blue Strapped Shoes',
      description: `Get your Something Blue right here as a unique touch to your outfit.
                     We offer several different syles so pick a shoe you like.`,
@@ -145,7 +145,7 @@ module.exports = {
       updatedAt: new Date()
     },
     {
-     userId: user3.id,
+     sellerId: seller3.id,
      title: 'Wedding Shoes',
      description: `Aside from being gorgeous, these are actually pretty comfortable.
                     I didn't have much time for sitting at my reception. Too busy partying,
@@ -156,7 +156,7 @@ module.exports = {
       updatedAt: new Date()
     },
     {
-      userId: user1.id,
+      sellerId: seller1.id,
       title: 'Blue Bridal Gown',
       description: `Who says you have to wear white on your wedding day. Get the perfect gown
                     and your something blue all in one.`,
@@ -166,7 +166,7 @@ module.exports = {
       updatedAt: new Date()
     },
     {
-     userId: user2.id,
+     sellerId: seller2.id,
      title: 'Mother of the Bride Gown',
      description: `Is it white and gold or is it black and blue?
                   Get the gown that started a twitter war.`,
@@ -176,7 +176,7 @@ module.exports = {
       updatedAt: new Date()
     },
     {
-     userId: user3.id,
+     sellerId: seller3.id,
      title: 'Mermaid Gown',
      description: `This is  a designer piece that I got on sale
                     at ebay. It never fit me well enough so I'm happy
@@ -187,7 +187,7 @@ module.exports = {
       updatedAt: new Date()
     },
     {
-      userId: user1.id,
+      sellerId: seller1.id,
       title: 'Mermaid Gown With Shawl',
       description: `This mermaid gown is truly stunning and the shall adds
                     a classic touch.`,
@@ -197,7 +197,7 @@ module.exports = {
       updatedAt: new Date()
     },
     {
-     userId: user2.id,
+     sellerId: seller2.id,
      title: 'Princess Gown',
      description: `Feel like a princess in this bridal gown. You won't
                     want to wear anything else.`,
@@ -207,7 +207,7 @@ module.exports = {
       updatedAt: new Date()
     },
     {
-     userId: user3.id,
+     sellerId: seller3.id,
      title: 'Brown Bridesmaids Gown',
      description: `My best friend forced us to wear this brown dress for her wedding.
                   At first, we were all hesitant but it was truly flattering to all
