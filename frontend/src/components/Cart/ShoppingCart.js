@@ -6,3 +6,5 @@ function ShoppingCart(){
     const dispatch = useDispatch();
 
 }
+
+export default ShoppingCart;
