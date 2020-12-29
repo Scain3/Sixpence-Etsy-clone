@@ -1,6 +1,6 @@
 import { fetch } from './csrf';
 
-const ADD_ITEM = '/cart/ADD_ITEM';
+const ADD_ITEM_TO_CART = '/cart/ADD_ITEM';
 
 const PURCHASE_ITEMS = '/CART/PURCHASE_ITEMS';
 
