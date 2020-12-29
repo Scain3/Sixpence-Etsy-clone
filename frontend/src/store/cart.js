@@ -4,7 +4,8 @@ const ADD_ITEM = '/cart/ADD_ITEM';
 
 const PURCHASE_ITEMS = '/CART/PURCHASE_ITEMS';
 
-export const addItem = (id) => {
+export const addItem = (id) => async(dispatch) => {
+    const response = await fetch("/api")
     return {type: ADD_ITEM, payload: id}
 }
 
