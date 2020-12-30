@@ -26,7 +26,7 @@ export const purchaseItems = (id) => {
 const cartReducer = (state={}, action) => {
     switch(action.type){
         case ADD_ITEM_TO_CART:
-            return [action.payload];
+            return [...action.payload];
         case PURCHASE_ITEMS:
             return {};
         default:
