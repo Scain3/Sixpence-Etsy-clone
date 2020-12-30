@@ -7,7 +7,7 @@ import searchReducer from './search';
 
 const rootReducer = combineReducers({
   session: sessionReducer,
-  product: productReducer,
+  products: productReducer,
   cart: cartReducer,
   search: searchReducer
 

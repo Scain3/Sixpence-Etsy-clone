@@ -30,10 +30,10 @@ function App() {
             <SignupFormPage />
           </Route>
           <Route path="/product/:id">
-            <ProductItem />
+            <SingleProductPage />
           </Route>
           <Route path="/search">
-            <SingleProductPage />
+            <SearchProductPage />
           </Route>
           <Route path="/cart">
             <ShoppingCart />

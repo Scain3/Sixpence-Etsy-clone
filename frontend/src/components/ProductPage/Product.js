@@ -7,17 +7,21 @@ import ProductItem  from "../ProductPage/ProductItem";
 import './Product.css';
 
 function Productpage(){
-    const products = useSelector(state => state.product);
+    const products = useSelector(state => state.products);
     const dispatch = useDispatch();
 
     useEffect(() => {
             dispatch(fetchProducts());
     }, [dispatch])
-
+    console.log(products);
+    if(!products){
+        return null;
+    }
+    const productsArr = Object.values(products);
     return(
         <div className="productContainer">
-            {products.map((productItem)=>(
-                <ProductItem product={productItem} />
+            {productsArr.map((productItem)=>(
+                <ProductItem key={productItem.id} product={productItem} />
              ))}
         </div>
     )

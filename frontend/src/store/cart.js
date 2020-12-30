@@ -4,8 +4,8 @@ const ADD_ITEM_TO_CART = '/cart/ADD_ITEM';
 
 const PURCHASE_ITEMS = '/CART/PURCHASE_ITEMS';
 
-const addToCart = (id) => {
-    return {type: ADD_ITEM_TO_CART, payload: id}
+const addToCart = (item) => {
+    return {type: ADD_ITEM_TO_CART, payload: item}
 }
 
 export const addItemToCart = (productListingId, userId) => async(dispatch) => {
@@ -26,7 +26,7 @@ export const purchaseItems = (id) => {
 const cartReducer = (state=[], action) => {
     switch(action.type){
         case ADD_ITEM_TO_CART:
-            return [action.payload];
+            return [...state, action.payload];
         case PURCHASE_ITEMS:
             return {};
         default:
