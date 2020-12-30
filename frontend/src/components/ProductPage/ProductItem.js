@@ -12,10 +12,9 @@ function ProductItem(props){
 
 
 
-    const handleClick = (e) => {
+    const handleClick = () => {
         console.log("userId", userId);
-        console.log('eId', e.target.id);
-        const productId = e.target.id
+        const productId = productItem.id;
         console.log("productId", productId);
         dispatch(addItemToCart(productId, userId));
     }

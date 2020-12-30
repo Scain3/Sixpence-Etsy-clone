@@ -12,6 +12,7 @@ export const addItemToCart = (productListingId, userId) => async(dispatch) => {
     const response = await fetch("/api/cart/${productListingId}", {
         method: 'POST',
         body: JSON.stringify({
+            productListingId,
             userId
         })
     });
