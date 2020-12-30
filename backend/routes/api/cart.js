@@ -3,18 +3,18 @@ const router = express.Router();
 const asyncHandler = (handler) => (req, res, next) => handler(req, res, next).catch(next);
 const { Cart, User, ProductListing } = require("../../db/models");
 
-router.get('/:id(\\d+)', asyncHandler(async(req, res, next) => {
-    const cartItems = await Cart.create(
+router.post('/:productListingId(\\d+)', asyncHandler(async(req, res, next) => {
+    const user = await User.findByPk(req.body.userId);
+    const product = await ProductListing.findByPk(req.params.productListingId);
+    const cartItem = await Cart.create(
         {
-        buyerId: User.id,
-        title: ProductListing.title,
-        image: ProductListing.image,
-        price: ProductListing.price
-    },{
-        include: [User, ProductListing]
+        buyerId: user.id,
+        title: product.title,
+        image: product.image,
+        price: product.price
     })
     res.json({
-        cartItems
+        cartItem
     })
 }))
 
