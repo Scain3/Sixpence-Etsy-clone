@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch } from 'react-redux';
+import { NavLink } from 'react-router-dom';
 import * as sessionActions from '../../store/session';
+import { fetchProducts } from "../../store/product";
 
 function ProfileButton({ user }) {
   const dispatch = useDispatch();
@@ -36,6 +38,7 @@ function ProfileButton({ user }) {
         <ul className="profile-dropdown">
           <li>{user.username}</li>
           <li>{user.email}</li>
+          <li><NavLink to="/add-a-product" className="link">Add A Listing</NavLink></li>
           <li>
             <button onClick={logout}>Log Out</button>
           </li>
