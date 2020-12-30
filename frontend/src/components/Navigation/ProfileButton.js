@@ -5,12 +5,12 @@ import * as sessionActions from '../../store/session';
 function ProfileButton({ user }) {
   const dispatch = useDispatch();
   const [showMenu, setShowMenu] = useState(false);
-  
+
   const openMenu = () => {
     if (showMenu) return;
     setShowMenu(true);
   };
-  
+
   useEffect(() => {
     if (!showMenu) return;
 
@@ -19,7 +19,7 @@ function ProfileButton({ user }) {
     };
 
     document.addEventListener('click', closeMenu);
-  
+
     return () => document.removeEventListener("click", closeMenu);
   }, [showMenu]);
 
@@ -30,9 +30,8 @@ function ProfileButton({ user }) {
 
   return (
     <>
-      <button onClick={openMenu}>
-        <i className="fas fa-user-circle" />
-      </button>
+      <img className="profile-photo" src="https://media.giphy.com/media/ZXkraFrlIW1D25M6ZJ/giphy.gif" onClick={openMenu} />
+
       {showMenu && (
         <ul className="profile-dropdown">
           <li>{user.username}</li>
