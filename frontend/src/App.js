@@ -7,6 +7,7 @@ import * as sessionActions from "./store/session";
 import Navigation from "./components/Navigation";
 import Productpage from "./components/ProductPage/Product";
 import ProductItem from "./components/ProductPage/ProductItem";
+import SearchProductPage from "./components/Search/SearchProductPage";
 
 function App() {
   const dispatch = useDispatch();
@@ -26,11 +27,14 @@ function App() {
           <Route path="/signup">
             <SignupFormPage />
           </Route>
+          <Route path="/product/:id">
+            <ProductItem />
+          </Route>
+          <Route path="/search">
+            <SearchProductPage />
+          </Route>
           <Route exact path="/">
             <Productpage />
-          </Route>
-          <Route path="/product/id">
-            <ProductItem />
           </Route>
         </Switch>
       )}

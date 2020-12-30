@@ -9,8 +9,8 @@ function ShoppingCart(){
     const cartItems = Object.values(cart)
         .map(item => {
             return {
-                ...item,
-                ...product[item.id]
+                item,
+
             };
         });
     if(!cartItems || !cartItems.length) return (

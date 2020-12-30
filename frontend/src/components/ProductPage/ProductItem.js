@@ -5,7 +5,6 @@ import './Product.css';
 
 function ProductItem(props){
     const productItem = props.product;
-    //const product = useSelector(state => state.product);
     const userId = useSelector(state => state.session.user.id);
     const dispatch = useDispatch();
     const history = useHistory();

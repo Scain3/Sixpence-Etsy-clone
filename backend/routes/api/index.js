@@ -3,6 +3,7 @@ const sessionRouter = require('./session.js');
 const usersRouter = require('./users.js');
 const productRouter = require('./productListing.js');
 const cartRouter = require('./cart.js');
+const searchRouter = require('./search.js');
 
 // GET /api/set-token-cookie
 const asyncHandler = require('express-async-handler');
@@ -46,6 +47,9 @@ router.use('/session', sessionRouter);
 router.use('/users', usersRouter);
 
 router.use('/products', productRouter);
+
 router.use('/cart', cartRouter);
+
+router.use('/search', searchRouter);
 
 module.exports = router;
