@@ -5,24 +5,24 @@ import './Product.css';
 
 function ProductItem(props){
     const productItem = props.product;
-    const product = useSelector(state => state.product);
+    //const product = useSelector(state => state.product);
     const userId = useSelector(state => state.session.user.id);
     const dispatch = useDispatch();
     const history = useHistory();
 
-    const productId = product.filter((aProduct) =>
-        aProduct.id
-    )
 
-    const handleClick = () => {
+
+    const handleClick = (e) => {
         console.log("userId", userId);
+        console.log('eId', e.target.id);
+        const productId = e.target.id
         console.log("productId", productId);
         dispatch(addItemToCart(productId, userId));
     }
 
     return(
         <div key={productItem.title}>
-            <div className="image-block">
+            <div className="image-block" >
                 <img className="images" src={productItem.image} alt={productItem.title} onClick={()=> history.push(`/product/${productItem.id}`)} />
                 <h4>${productItem.price}</h4>
                 <button onClick={handleClick}>Add To Cart</button>
