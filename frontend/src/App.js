@@ -9,6 +9,7 @@ import Productpage from "./components/ProductPage/Product";
 import ProductItem from "./components/ProductPage/ProductItem";
 import SearchProductPage from "./components/Search/SearchProductPage";
 import ShoppingCart from "./components/Cart/ShoppingCart";
+import SingleProductPage from "./components/ProductPage/SingleProduct";
 
 function App() {
   const dispatch = useDispatch();
@@ -32,7 +33,7 @@ function App() {
             <ProductItem />
           </Route>
           <Route path="/search">
-            <SearchProductPage />
+            <SingleProductPage />
           </Route>
           <Route path="/cart">
             <ShoppingCart />

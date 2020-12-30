@@ -3,11 +3,24 @@ const router = express.Router();
 const asyncHandler = (handler) => (req, res, next) => handler(req, res, next).catch(next);
 const { ProductListing, User } = require("../../db/models");
 
+//route to get all product listings
 router.get('/', asyncHandler(async(req, res)=> {
     const productItem = await ProductListing.findAll();
     res.json({
         product: productItem,
     })
 }));
+
+//route to get single productListing that matches id
+router.get('/:id(\\d+)', asyncHandler(async(req, res, next) => {
+    const productItem = await ProductListing.findOne({
+        where: {
+            id: req.params.id
+        }
+    })
+    res.json({
+        singleItem: productItem
+    })
+}))
 
 module.exports = router;
