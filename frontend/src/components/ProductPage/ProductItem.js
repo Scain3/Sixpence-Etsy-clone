@@ -5,10 +5,14 @@ import './Product.css';
 
 function ProductItem(props){
     const productItem = props.product;
-    const productId = useSelector(state => state.product.id);
+    const product = useSelector(state => state.product);
     const userId = useSelector(state => state.session.user.id);
     const dispatch = useDispatch();
     const history = useHistory();
+
+    const productId = product.filter((aProduct) =>
+        aProduct.id
+    )
 
     const handleClick = () => {
         console.log("userId", userId);
@@ -21,7 +25,7 @@ function ProductItem(props){
             <div className="image-block">
                 <img className="images" src={productItem.image} alt={productItem.title} onClick={()=> history.push(`/product/${productItem.id}`)} />
                 <h4>${productItem.price}</h4>
-                <button onClick={handleClick(productItem.id)}>Add To Cart</button>
+                <button onClick={handleClick}>Add To Cart</button>
             </div>
         </div>
     )
