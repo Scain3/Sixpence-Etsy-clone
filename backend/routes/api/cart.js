@@ -18,11 +18,9 @@ router.post('/:productListingId(\\d+)', asyncHandler(async(req, res, next) => {
     })
 }))
 
-router.delete('/:productListingId(\\d+)', asyncHandler(async(req, res, next) => {
-    const destroyProduct = await ProductListing.destroy(req.params.productListingId);
-    res.json({
-        destroyProduct
-    })
+router.delete('/:cartId(\\d+)', asyncHandler(async(req, res, next) => {
+    const cart = await Cart.findByPk(req.params.cartId);
+    await cart.destroy();
 }))
 
 module.exports = router;

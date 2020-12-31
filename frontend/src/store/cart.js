@@ -11,7 +11,7 @@ const addToCart = (item) => {
 }
 
 const removeItem = (id) => {
-    return {type: REMOVE_ITEM_FROM_CART, payload: item}
+    return {type: REMOVE_ITEM_FROM_CART, payload: id}
 }
 //THUNK ACTION TO ADD ITEM TO CART
 export const addItemToCart = (productListingId, userId) => async(dispatch) => {
@@ -25,8 +25,12 @@ export const addItemToCart = (productListingId, userId) => async(dispatch) => {
     dispatch(addToCart(response.data.cartItem));
 }
 
-export const removeItem = (id) => {
-    
+//THUNK ACTION TO REMOVE ITEM FROM CART
+export const removeItemFromCart = (cartId) => async(dispatch) => {
+    const response = await fetch(`/api/cart/${cartId}`,{
+        method: 'DELETE'
+    });
+    dispatch(removeItem(response.data))
 }
 
 export const purchaseItems = (id) => {
@@ -34,10 +38,14 @@ export const purchaseItems = (id) => {
 }
 
 
-const cartReducer = (state=[], action) => {
+const cartReducer = (state={}, action) => {
     switch(action.type){
         case ADD_ITEM_TO_CART:
-            return [...state, action.payload];
+            return {...state, [action.payload.id]: action.payload};
+        case REMOVE_ITEM_FROM_CART:
+            const newState = {...state}
+            delete newState[action.payload]
+            return newState;
         case PURCHASE_ITEMS:
             return {};
         default:
