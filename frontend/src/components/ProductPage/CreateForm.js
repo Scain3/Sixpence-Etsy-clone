@@ -11,15 +11,15 @@ function CreateFormPage(){
     const [description, setDescription] = useState("");
     const [image, setImage] = useState("");
     const [price, setPrice] = useState(0);
-    const userId = useSelector(state => state.session.user.username);
+    const userId = useSelector(state => state.session.user.id);
     const dispatch = useDispatch();
     const history = useHistory();
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async(e) => {
         e.preventDefault();
-        const product = {userId, title, description, image, price}
-       dispatch(fetchSetProducts(product));
-        history.push(`/new-product`);
+        const product = {sellerId: userId, title, description, image, price}
+       const newProduct = await dispatch(fetchSetProducts(product));
+        history.push(`/product/${newProduct.id}`);
     }
 
     return(

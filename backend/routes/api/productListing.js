@@ -24,13 +24,9 @@ router.get('/:id(\\d+)', asyncHandler(async(req, res, next) => {
 }));
 
 router.post('/add-a-listing', asyncHandler(async(req, res, next) => {
-    const user = await User.findOne({
-        where: {
-            username: req.body.userId
-        }
-    })
+
     const product = await ProductListing.create({
-        userId: user.id,
+        sellerId: req.body.sellerId,
         title: req.body.title,
         description: req.body.description,
         image: req.body.image,

@@ -6,11 +6,9 @@ import SignupFormPage from "./components/SignupFormPage";
 import * as sessionActions from "./store/session";
 import Navigation from "./components/Navigation";
 import Productpage from "./components/ProductPage/Product";
-import ProductItem from "./components/ProductPage/ProductItem";
 import SearchProductPage from "./components/Search/SearchProductPage";
 import ShoppingCart from "./components/Cart/ShoppingCart";
 import SingleProductPage from "./components/ProductPage/SingleProduct";
-import CreateAProductPage from "./components/ProductPage/CreateAProductPage";
 import CreateFormPage from "./components/ProductPage/CreateForm";
 
 function App() {
@@ -39,9 +37,6 @@ function App() {
           </Route>
           <Route path="/cart">
             <ShoppingCart />
-          </Route>
-          <Route path="/new-product">
-            <CreateAProductPage />
           </Route>
           <Route path="/add-a-product">
             <CreateFormPage />

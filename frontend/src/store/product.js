@@ -42,23 +42,18 @@ export const fetchSingleProduct = (id) => async(dispatch) => {
     dispatch(getOneProduct(response.data.singleItem));
 }
 
+//THUNK ACTION FOR CREATING A PRODUCT
 export const fetchSetProducts = (product) => async(dispatch) => {
-    const { userId, title, description, image, price } = product;
+    // const { userId, title, description, image, price } = product;
 
     const response = await fetch("/api/products/add-a-listing", {
         method: "POST",
         headers: { "Content-Type": "application/json"},
-        body: JSON.stringify( {
-            userId,
-            title,
-            description,
-            image,
-            price
-        })
+        body: JSON.stringify(product)
     });
 
     dispatch(setProduct(response.data.productItem));
-    return response;
+    return response.data.productItem;
 }
 
 const initialState = {
@@ -79,7 +74,7 @@ const productReducer = (state=initialState, action) => {
         case GET_ONE_PRODUCT:
             return {...state, [action.payload.id]: action.payload};
         case SET_PRODUCT:
-            return [action.payload];
+            return {...state, [action.payload.id]: action.payload};
         default:
             return state;
     }
