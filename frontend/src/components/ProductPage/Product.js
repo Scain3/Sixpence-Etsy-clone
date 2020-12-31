@@ -8,12 +8,13 @@ import './Product.css';
 
 function Productpage(){
     const products = useSelector(state => state.products);
+    //const user = useSelector(state => state.user);
     const dispatch = useDispatch();
 
     useEffect(() => {
             dispatch(fetchProducts());
     }, [dispatch])
-    
+
     if(!products){
         return null;
     }

@@ -5,17 +5,20 @@ import './Product.css';
 
 function ProductItem(props){
     const productItem = props.product;
-    const userId = useSelector(state => state.session.user.id);
+    const user = useSelector(state => state.session.user);
     const dispatch = useDispatch();
     const history = useHistory();
 
 
 
     const handleClick = () => {
+        if(!user){
+         return history.push('/login');
+        }
         const productId = productItem.id;
-        dispatch(addItemToCart(productId, userId));
+        dispatch(addItemToCart(productId, user.id));
     }
-    
+
     return(
         <div key={productItem.title}>
             <div className="image-block" >
