@@ -27,10 +27,12 @@ export const addItemToCart = (productListingId, userId) => async(dispatch) => {
 
 //THUNK ACTION TO REMOVE ITEM FROM CART
 export const removeItemFromCart = (cartId) => async(dispatch) => {
+    console.log('hello');
     const response = await fetch(`/api/cart/${cartId}`,{
         method: 'DELETE'
     });
-    dispatch(removeItem(response.data))
+    console.log(response);
+    dispatch(removeItem(cartId))
 }
 
 export const purchaseItems = (id) => {
@@ -44,6 +46,7 @@ const cartReducer = (state={}, action) => {
             return {...state, [action.payload.id]: action.payload};
         case REMOVE_ITEM_FROM_CART:
             const newState = {...state}
+            console.log(action.payload);
             delete newState[action.payload]
             return newState;
         case PURCHASE_ITEMS:
