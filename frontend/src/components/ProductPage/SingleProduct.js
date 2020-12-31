@@ -18,7 +18,7 @@ function SingleProductPage(){
         if(singleItem) return
         dispatch(fetchSingleProduct(id));
     }, [id])
-    console.log('single item', singleItem);
+    
     if(!singleItem) return null
     return(
         <div className="productContainer">

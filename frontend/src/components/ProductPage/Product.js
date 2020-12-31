@@ -13,7 +13,7 @@ function Productpage(){
     useEffect(() => {
             dispatch(fetchProducts());
     }, [dispatch])
-    console.log(products);
+    
     if(!products){
         return null;
     }

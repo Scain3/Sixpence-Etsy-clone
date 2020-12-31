@@ -15,7 +15,7 @@ function ProductItem(props){
         const productId = productItem.id;
         dispatch(addItemToCart(productId, userId));
     }
-    console.log(productItem);
+    
     return(
         <div key={productItem.title}>
             <div className="image-block" >

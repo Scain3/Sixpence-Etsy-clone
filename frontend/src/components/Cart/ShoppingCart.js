@@ -3,7 +3,6 @@ import {purchaseItems} from "../../store/cart";
 
 function ShoppingCart(){
 const cart = useSelector(state => state.cart);
-console.log(cart);
 
   return(
     <div>
