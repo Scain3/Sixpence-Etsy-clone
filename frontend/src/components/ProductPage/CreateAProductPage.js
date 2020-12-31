@@ -5,7 +5,7 @@ import './Product.css';
 
 
 function CreateAProductPage(){
-    const products = useSelector(state => state.product);
+    const products = useSelector(state => state.products);
     const firstItem = products[0] || {};
     const history = useHistory();
     const dispatch = useDispatch();

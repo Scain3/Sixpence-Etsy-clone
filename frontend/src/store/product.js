@@ -61,7 +61,12 @@ export const fetchSetProducts = (product) => async(dispatch) => {
     return response;
 }
 
-const initialState = {}
+const initialState = {
+    title: " ",
+    description: " ",
+    image: " ",
+    price: " "
+}
 
 const productReducer = (state=initialState, action) => {
     switch(action.type){
