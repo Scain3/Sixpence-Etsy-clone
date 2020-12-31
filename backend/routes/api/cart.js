@@ -18,4 +18,11 @@ router.post('/:productListingId(\\d+)', asyncHandler(async(req, res, next) => {
     })
 }))
 
+router.delete('/:productListingId(\\d+)', asyncHandler(async(req, res, next) => {
+    const destroyProduct = await ProductListing.destroy(req.params.productListingId);
+    res.json({
+        destroyProduct
+    })
+}))
+
 module.exports = router;
