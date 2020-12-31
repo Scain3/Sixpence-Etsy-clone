@@ -13,7 +13,7 @@ const cart = useSelector(state => state.cart);
         <h3>{cartItem.title}</h3>
         <img src={cartItem.image} alt={cartItem.title} />
         <p>{cartItem.price}</p>
-        <button>Purchase</button>
+        <button>Delete</button>
       </div>
 
     ))}
