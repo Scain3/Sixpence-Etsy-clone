@@ -20,16 +20,16 @@ function LoginForm() {
   };
 
   return (
-    <>
+    <div className="formContainer">
       <h1>Log In</h1>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="form">
         <ul>
           {errors.map((error, idx) => (
             <li key={idx}>{error}</li>
           ))}
         </ul>
         <label>
-          Username or Email
+          Email
           <input
             type="text"
             value={credential}
@@ -46,9 +46,9 @@ function LoginForm() {
             required
           />
         </label>
-        <button type="submit">Log In</button>
+        <button type="submit" className="button">Log In</button>
       </form>
-    </>
+    </div>
   );
 }
 
