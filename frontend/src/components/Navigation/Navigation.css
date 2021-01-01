@@ -51,9 +51,13 @@ li{
 }
 
 .sign-in{
+  background: none;
+  border: none;
+  padding: 0px;
   text-decoration: none;
   color: #36454F;
   font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .register{
@@ -61,6 +65,9 @@ li{
   color: #36454F;
   font-size: 15px;
   margin-left: 20px;
+  margin-top: 15px;
+  padding: 0px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .shopping-cart::after{
