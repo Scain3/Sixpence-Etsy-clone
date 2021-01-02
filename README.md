@@ -54,6 +54,5 @@ Demo-User Credentials:
 
 ![Landing page for Etsy](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRI-unx1hzefzPmp6MOpX62-zsAZG9mqYuHZA&usqp=CAU)
 
-This is the landing page for the Etsy app. I want to implement the Navbar, the search feature at the top using query functions, the shopping cart in the right hand corner using a drop down, and the product list feed.
+This is the landing page for the Etsy app. I have implemented a similar Navbar, containg a functioning search feature at the top using query functions, a shopping cart in the right hand corner, and the product list feed.
 
-![Reviews](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOZcqqiScyzkRPPS7kGRI4PlobjNQ29fAlfQ&usqp=CAU)
