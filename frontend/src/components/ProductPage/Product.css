@@ -48,25 +48,28 @@
   .createForm{
     display: block;
     margin: 100px;
-    justify-content: space-between;
+    justify-content: space-around;
   }
 
   .createInputs{
-    margin: 20px;
-    justify-content: center;
-    height: 30px;
-    top: 30px;
+    border-radius: 5px;
+    width: 250px;
+    height:25px;
+    margin: 0 auto;
+    margin-top: 10px;
+    box-shadow: 0 1px 4px 0 rgba(34, 34, 34, 0.1)
   }
 
   .createDescription{
-    margin: 20px;
+    /* margin: 0 20px; */
+    margin-top: 10px;
     justify-content: center;
     height: 50px;
     width: 250px;
   }
 
-  .createButton{
+  /* .createButton{
     margin: 20px;
     height: 30px;
     line-height: 25px;
-  }
+  } */

@@ -29,7 +29,7 @@ function SignupFormPage() {
 
   return (
     <div className="formContainer">
-      <h1>Sign Up</h1>
+      <h1 className="sign-in">Sign Up</h1>
       <form className="form" onSubmit={handleSubmit}>
         <ul>
           {errors.map((error, idx) => <li key={idx}>{error}</li>)}
@@ -37,6 +37,7 @@ function SignupFormPage() {
         <label>
           Email
           <input
+            className="input"
             type="text"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -46,6 +47,7 @@ function SignupFormPage() {
         <label>
           Username
           <input
+            className="input"
             type="text"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
@@ -55,6 +57,7 @@ function SignupFormPage() {
         <label>
           Password
           <input
+            className="input"
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
@@ -64,6 +67,7 @@ function SignupFormPage() {
         <label>
           Confirm Password
           <input
+            className="input"
             type="password"
             value={confirmPassword}
             onChange={(e) => setConfirmPassword(e.target.value)}
