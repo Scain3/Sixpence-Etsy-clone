@@ -8,7 +8,7 @@ function ShoppingCart(){
   const cart = useSelector(state => state.cart);
   const cartArr = Object.values(cart);
   const dispatch = useDispatch();
-  
+
   if(cartArr.length === 0) return <h1>Your cart is empty!</h1>
 
   return(
@@ -19,7 +19,7 @@ function ShoppingCart(){
         <h3>{cartItem.title}</h3>
         <img className="images" src={cartItem.image} alt={cartItem.title} />
         <p>{cartItem.price}</p>
-        <button onClick={()=> {dispatch(removeItemFromCart(cartItem.id))}}>Delete</button>
+        <button onClick={()=> {dispatch(removeItemFromCart(cartItem.id))}}>Remove</button>
       </div>
 
     ))}
