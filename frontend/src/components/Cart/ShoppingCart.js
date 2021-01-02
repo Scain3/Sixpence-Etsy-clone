@@ -1,6 +1,7 @@
 import {useSelector, useDispatch} from "react-redux";
 import {purchaseItems} from "../../store/cart";
 import {removeItemFromCart} from "../../store/cart";
+import './Cart.css';
 // import {useParams} from "react-router-dom";
 
 function ShoppingCart(){
