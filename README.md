@@ -1,7 +1,7 @@
 # Sixpence-etsy-clone
 **Welcome to the Sixpence wiki!**
 
-In order to login to the Sixpence application. Please use the Demo-User credentials or create a username and password in order to login to the site.
+In order to login to the Sixpence application, please use the Demo-User credentials below or register and create a username and password.
 
 Demo-User Credentials:
   1. username: 'Demo-lition'
