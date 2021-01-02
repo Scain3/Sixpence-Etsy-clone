@@ -10,7 +10,7 @@ function SearchProductPage(){
             {products.map((product)=>(
                 <div key={product.title}>
                     <h1>{product.title}</h1>
-                    <img className="image" src={product.image} alt={product.title} />
+                    <img className="images" src={product.image} alt={product.title} />
                     <p className="description">{product.description}</p>
                 </div>
             ))}
