@@ -12,17 +12,20 @@ function ShoppingCart(){
   if(cartArr.length === 0) return <h1>Your cart is empty!</h1>
 
   return(
-    <div> There are {cartArr.length} items in your cart.
-    {cartArr.map((cartItem) => (
+    <div>
+      <h2>There are {cartArr.length} items in your cart.</h2>
+      <div>
+      {cartArr.map((cartItem) => (
 
-      <div key={cartItem.title}>
-        <h3>{cartItem.title}</h3>
-        <img className="images" src={cartItem.image} alt={cartItem.title} />
-        <p>{cartItem.price}</p>
-        <button onClick={()=> {dispatch(removeItemFromCart(cartItem.id))}}>Remove</button>
+        <div key={cartItem.title}>
+          <h3>{cartItem.title}</h3>
+          <img className="images" src={cartItem.image} alt={cartItem.title} />
+          <p className="price">{cartItem.price}</p>
+          <button onClick={()=> {dispatch(removeItemFromCart(cartItem.id))}}>Remove</button>
+        </div>
+
+      ))}
       </div>
-
-    ))}
     </div>
   )
 
