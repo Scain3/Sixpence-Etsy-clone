@@ -13,7 +13,7 @@ function ShoppingCart(){
 
   return(
     <div>
-      <h2>There are {cartArr.length} items in your cart.</h2>
+      <h2> There are {cartArr.length} items in your cart.</h2>
       <div>
       {cartArr.map((cartItem) => (
 
