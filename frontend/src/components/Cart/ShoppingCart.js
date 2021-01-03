@@ -10,6 +10,14 @@ function ShoppingCart(){
   const dispatch = useDispatch();
 
   if(cartArr.length === 0) return <h1>Your cart is empty!</h1>
+  if(cartArr.length === 1) return (
+    <div>
+      <h2>There is 1 item in your cart!</h2>
+      <img className="images" src={cartArr[0].image} alt={cartArr[0].title} />
+      <p>{cartArr[0].price}</p>
+      <button onClick={()=> {dispatch(removeItemFromCart(cartArr[0].id))}}>Remove</button>
+    </div>
+    )
 
   return(
     <div>
