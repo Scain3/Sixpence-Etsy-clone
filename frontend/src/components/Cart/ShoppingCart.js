@@ -13,6 +13,7 @@ function ShoppingCart(){
   if(cartArr.length === 1) return (
     <div>
       <h2>There is 1 item in your cart!</h2>
+      <h3>{cartArr[0].title}</h3>
       <img className="images" src={cartArr[0].image} alt={cartArr[0].title} />
       <p>{cartArr[0].price}</p>
       <button onClick={()=> {dispatch(removeItemFromCart(cartArr[0].id))}}>Remove</button>

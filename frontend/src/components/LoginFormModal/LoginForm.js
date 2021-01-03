@@ -30,25 +30,26 @@ function LoginForm() {
         </ul>
         <label>
           Email
-          <input
-            className="input"
-            type="text"
-            value={credential}
-            onChange={(e) => setCredential(e.target.value)}
-            required
-          />
         </label>
+        <input
+          className="input"
+          type="text"
+          value={credential}
+          onChange={(e) => setCredential(e.target.value)}
+          required
+        />
+
         <label>
           Password
-          <input
-            className="input"
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
         </label>
-        <button type="submit" className="button">Log In</button>
+        <input
+          className="input"
+          type="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          required
+        />
+        <button type="submit" className="button">Sign In</button>
       </form>
     </div>
   );

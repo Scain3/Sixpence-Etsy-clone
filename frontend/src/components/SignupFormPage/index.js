@@ -36,6 +36,7 @@ function SignupFormPage() {
         </ul>
         <label>
           Email
+        </label>
           <input
             className="input"
             type="text"
@@ -43,37 +44,36 @@ function SignupFormPage() {
             onChange={(e) => setEmail(e.target.value)}
             required
           />
-        </label>
         <label>
           Username
-          <input
-            className="input"
-            type="text"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-            required
-          />
         </label>
+        <input
+          className="input"
+          type="text"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+          required
+        />
         <label>
           Password
-          <input
-            className="input"
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
         </label>
+        <input
+          className="input"
+          type="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          required
+        />
         <label>
           Confirm Password
-          <input
-            className="input"
-            type="password"
-            value={confirmPassword}
-            onChange={(e) => setConfirmPassword(e.target.value)}
-            required
-          />
         </label>
+        <input
+          className="input"
+          type="password"
+          value={confirmPassword}
+          onChange={(e) => setConfirmPassword(e.target.value)}
+          required
+        />
         <button className="button" type="submit">Sign Up</button>
       </form>
     </div>
