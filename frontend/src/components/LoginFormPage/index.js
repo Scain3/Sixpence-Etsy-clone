@@ -33,25 +33,29 @@ function LoginFormPage() {
         </ul>
         <label>
           Email
-          <input
-            className="input"
-            type="text"
-            value={credential}
-            onChange={(e) => setCredential(e.target.value)}
-            required
-          />
         </label>
+        <br />
+        <input
+          className="input"
+          type="text"
+          value={credential}
+          onChange={(e) => setCredential(e.target.value)}
+          required
+        />
+        <br />
         <label>
           Password
-          <input
-            className="input"
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
         </label>
-        <button className="button" type="submit">Log In</button>
+        <br />
+        <input
+          className="input"
+          type="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          required
+        />
+        <br />
+        <button className="button" type="submit">Sign In</button>
       </form>
     </div>
   );

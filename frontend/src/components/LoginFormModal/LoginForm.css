@@ -1,9 +1,10 @@
 .button{
-    background-color: white;
-    color: black;
+    background-color: black;
+    color: white;
     border-radius: 50px;
-    width: 60px;
+    width: 65px;
     margin-left: 20px;
+    margin: 0 auto;
 }
 
 .formContainer{
@@ -34,5 +35,3 @@
 label{
     margin: auto auto;
 }
-
-
