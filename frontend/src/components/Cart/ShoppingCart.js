@@ -12,7 +12,7 @@ function ShoppingCart(){
   if(cartArr.length === 0) return <h1>Your cart is empty!</h1>
 
   return(
-    <div>
+    <div> There are {cartArr.length} items in your cart.
     {cartArr.map((cartItem) => (
 
       <div key={cartItem.title}>
