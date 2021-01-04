@@ -43,10 +43,10 @@ Demo-User Credentials:
     - image
     - price
 3. Cart
-    -buyerId
-    -title
-    -image
-    -price
+    - buyerId
+    - title
+    - image
+    - price
    
 
 
