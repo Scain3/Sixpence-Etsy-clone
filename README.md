@@ -8,9 +8,7 @@ Demo-User Credentials:
   2. email: demo@user.io
   3. password: password
   
-  Sixpence is a clone of Etsy with a wedding essentials twist. This application is targeted toward women shopping for wedding essentials at discounted prices.
-  The features used in the implementation of this app include: product listing, single product listing, create a product listing, add to cart, delete from cart, 
-  and search for a product listing.
+  Sixpence is a clone of Etsy with a wedding essentials twist. This application is targeted toward non-sentimental people that want to sell their gently used items   and people planning their wedding interested in buying these gently used items at a discounted price. The features used in the implementation of this app include:   product listing, single product listing, create a product listing, add to cart, delete from cart, and search for a product listing.
 
 **Features List:**
 - Product Listings
