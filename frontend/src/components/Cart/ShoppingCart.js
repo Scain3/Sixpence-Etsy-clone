@@ -3,6 +3,13 @@ import {purchaseItems} from "../../store/cart";
 import {removeItemFromCart} from "../../store/cart";
 import './Cart.css';
 
+function CartItemsHeader({howManyItems}) {
+  if (howManyItems === 1) {
+      return <h2>There is 1 item in your cart.</h2>
+  }
+  return <h2>There are {howManyItems} items in your cart.</h2>;
+}
+
 
 function ShoppingCart(){
   const cart = useSelector(state => state.cart);
@@ -10,19 +17,12 @@ function ShoppingCart(){
   const dispatch = useDispatch();
 
   if(cartArr.length === 0) return <h1>Your cart is empty!</h1>
-  if(cartArr.length === 1) return (
-    <div>
-      <h2>There is 1 item in your cart!</h2>
-      <h3>{cartArr[0].title}</h3>
-      <img className="images" src={cartArr[0].image} alt={cartArr[0].title} />
-      <p>{cartArr[0].price}</p>
-      <button onClick={()=> {dispatch(removeItemFromCart(cartArr[0].id))}}>Remove</button>
-    </div>
-    )
+
 
   return(
     <div>
-      <h2> There are {cartArr.length} items in your cart.</h2>
+      <CartItemsHeader howManyItems={cartArr.length} />
+     
       <div>
       {cartArr.map((cartItem) => (
 
