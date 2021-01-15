@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useDispatch } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import * as sessionActions from '../../store/session';
-import { fetchProducts } from "../../store/product";
+
 
 function ProfileButton({ user }) {
   const dispatch = useDispatch();
@@ -32,7 +32,7 @@ function ProfileButton({ user }) {
 
   return (
     <>
-      <img className="profile-photo" src="https://media.giphy.com/media/ZXkraFrlIW1D25M6ZJ/giphy.gif" onClick={openMenu} />
+      <img className="profile-photo" alt="profile-photo" src="https://media.giphy.com/media/ZXkraFrlIW1D25M6ZJ/giphy.gif" onClick={openMenu} />
 
       {showMenu && (
         <ul className="profile-dropdown">

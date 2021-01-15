@@ -1,5 +1,4 @@
 import {useSelector, useDispatch} from "react-redux";
-import {purchaseItems} from "../../store/cart";
 import {removeItemFromCart} from "../../store/cart";
 import './Cart.css';
 
@@ -22,7 +21,7 @@ function ShoppingCart(){
   return(
     <div>
       <CartItemsHeader howManyItems={cartArr.length} />
-     
+
       <div>
       {cartArr.map((cartItem) => (
 

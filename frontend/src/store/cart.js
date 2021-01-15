@@ -27,7 +27,7 @@ export const addItemToCart = (productListingId, userId) => async(dispatch) => {
 
 //THUNK ACTION TO REMOVE ITEM FROM CART
 export const removeItemFromCart = (cartId) => async(dispatch) => {
-    const response = await fetch(`/api/cart/${cartId}`,{
+    await fetch(`/api/cart/${cartId}`,{
         method: 'DELETE'
     });
 

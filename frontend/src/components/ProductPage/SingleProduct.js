@@ -21,7 +21,7 @@ function SingleProductPage(){
     useEffect(()=> {
         if(singleItem) return
         dispatch(fetchSingleProduct(id));
-    }, [id])
+    }, [id, dispatch, singleItem])
 
     const handleClick = () => {
         if(!user){
