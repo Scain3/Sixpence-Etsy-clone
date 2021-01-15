@@ -9,7 +9,10 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       buyerId: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'Users'
+        }
       },
       title: {
         type: Sequelize.STRING
