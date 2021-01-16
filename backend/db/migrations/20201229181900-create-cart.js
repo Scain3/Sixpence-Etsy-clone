@@ -14,14 +14,11 @@ module.exports = {
           model: 'Users'
         }
       },
-      title: {
-        type: Sequelize.STRING
-      },
-      image: {
-        type: Sequelize.STRING
-      },
-      price: {
-        type: Sequelize.FLOAT
+      productId: {
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'ProductListings'
+        }
       },
       createdAt: {
         allowNull: false,
