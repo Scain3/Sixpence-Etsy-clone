@@ -6,7 +6,11 @@ const { Cart, User, ProductListing } = require("../../db/models");
 router.post('/:productListingId(\\d+)', asyncHandler(async(req, res, next) => {
     const user = await User.findByPk(req.body.userId);
     // const product = await ProductListing.findByPk(req.params.productListingId);
-    const productId = await Cart.productId
+    const product = await Cart.findAll({
+        where: {
+            id: req.params.id
+        }
+    })
     const cartItem = await Cart.create(
         {
         buyerId: user.id,
