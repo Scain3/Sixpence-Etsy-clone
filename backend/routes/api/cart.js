@@ -3,14 +3,14 @@ const router = express.Router();
 const asyncHandler = (handler) => (req, res, next) => handler(req, res, next).catch(next);
 const { Cart, User, ProductListing } = require("../../db/models");
 
-router.post('/:productListingId(\\d+)', asyncHandler(async(req, res, next) => {
+router.post('/:productListingId(\\d+)', asyncHandler(async(req, res) => {
     const user = await User.findByPk(req.body.userId);
-    // const product = await ProductListing.findByPk(req.params.productListingId);
-    const product = await Cart.findAll({
-        where: {
-            id: req.params.id
-        }
-    })
+    //const product = await ProductListing.findByPk(req.params.productListingId);
+    // const product = await ProductListing.findAll({
+    //     where: {
+    //         id: req.params.productListingId
+    //     }
+    // })
     const cartItem = await Cart.create(
         {
         buyerId: user.id,
