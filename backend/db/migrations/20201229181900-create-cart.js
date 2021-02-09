@@ -20,6 +20,15 @@ module.exports = {
           model: 'ProductListings'
         }
       },
+      title: {
+        type: Sequelize. STRING,
+      },
+      image: {
+          type: Sequelize.TEXT,
+      },
+      price: {
+        type: Sequelize.FLOAT,
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

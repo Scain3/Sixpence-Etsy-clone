@@ -3,13 +3,13 @@ const router = express.Router();
 const asyncHandler = (handler) => (req, res, next) => handler(req, res, next).catch(next);
 const { Cart, User, ProductListing } = require("../../db/models");
 
-router.post('/:productListingId(\\d+)', asyncHandler(async(req, res) => {
+router.post('/:productListingId(\\d+)', asyncHandler(async(req, res, next) => {
     const user = await User.findByPk(req.body.userId);
 
     const product = await ProductListing.findAll({
         where: {
             id: req.params.productListingId
-        }
+        },
 
 
     })
@@ -20,7 +20,7 @@ router.post('/:productListingId(\\d+)', asyncHandler(async(req, res) => {
     //This is working. This tells me we need to map through an array
     //console.log(product.title);
 
-    const newProduct = product[0];
+    //const newProduct = product[0];
     //console.log(newProduct.title);
 
     const cartItem = await Cart.create(
@@ -28,13 +28,37 @@ router.post('/:productListingId(\\d+)', asyncHandler(async(req, res) => {
         // console.log(product[0].title),
         //console.log(newProduct.title),
         {
+            // include: {
+            //     model: ProductListing,
+            //     attributes: ['title', 'image', 'price']
+            // },
         buyerId: user.id,
-        title: newProduct.title,
-        image: newProduct.image,
-        price: newProduct.price
+        productId: product[0].id,
+        title: "",
+        image: "",
+        price: 0
+
+        // title: product[0].title,
+        // image: product[0].image,
+        // price: product[0].price
     }
-    )
-    console.log(cartItem)
+
+    );
+    cartItem.dataValues.title = product[0].title
+    cartItem.dataValues.image = product[0].image
+    cartItem.dataValues.price = product[0].price
+    // console.log(product.title)
+    // console.log(product[0].title)
+    console.log(product[0].title)
+    console.log(cartItem.productId)
+    console.log(cartItem.productId.title)
+    console.log(cartItem.title)
+    console.log(cartItem.price)
+    console.log(cartItem.image)
+    console.log(cartItem);
+    //console.log(cartItem.productId)
+    //console.log(cartItem.title)
+    //console.log(cartItem.productId[0].title)
     res.json({
         cartItem
     })

@@ -12,6 +12,8 @@ function CartItemsHeader({howManyItems}) {
 
 function ShoppingCart(){
   const cart = useSelector(state => state.cart);
+  
+  console.log(cart);
   const cartArr = Object.values(cart);
   const dispatch = useDispatch();
 
