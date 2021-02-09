@@ -22,6 +22,8 @@ export const addItemToCart = (productListingId, userId) => async(dispatch) => {
 
         })
     });
+    // const cartItem = response.json();
+    // dispatch(addToCart(cartItem));
     dispatch(addToCart(response.data.cartItem));
 }
 

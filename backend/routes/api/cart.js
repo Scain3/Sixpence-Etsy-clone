@@ -5,19 +5,36 @@ const { Cart, User, ProductListing } = require("../../db/models");
 
 router.post('/:productListingId(\\d+)', asyncHandler(async(req, res) => {
     const user = await User.findByPk(req.body.userId);
-    //const product = await ProductListing.findByPk(req.params.productListingId);
-    // const product = await ProductListing.findAll({
-    //     where: {
-    //         id: req.params.productListingId
-    //     }
-    // })
+
+    const product = await ProductListing.findAll({
+        where: {
+            id: req.params.productListingId
+        }
+
+
+    })
+    // console.log(product);
+    // console.log(product[0].title);
+    // console.log(product[0].image);
+    // console.log(product[0].price);
+    //This is working. This tells me we need to map through an array
+    //console.log(product.title);
+
+    const newProduct = product[0];
+    //console.log(newProduct.title);
+
     const cartItem = await Cart.create(
+        // console.log(product),
+        // console.log(product[0].title),
+        //console.log(newProduct.title),
         {
         buyerId: user.id,
-        title: product.title,
-        image: product.image,
-        price: product.price
-    })
+        title: newProduct.title,
+        image: newProduct.image,
+        price: newProduct.price
+    }
+    )
+    console.log(cartItem)
     res.json({
         cartItem
     })
