@@ -1,0 +1,9 @@
+.categories-container{
+    display: flex;
+    justify-content: center;
+    margin: 0 20px;
+}
+
+.categories{
+    margin: 0 20px;
+}

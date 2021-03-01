@@ -11,18 +11,18 @@ function SecondNav(){
     return(
         <div className="categories-container">
 
-            <div><NavLink className="something-old" to="/something-old" onClick={()=>{dispatch(fetchProducts())}}>Something Old</NavLink></div>
+            <div><NavLink className="categories something-old" to="/something-old" onClick={()=>{dispatch(fetchProducts())}}>Something Old</NavLink></div>
 
             <div>
-                <NavLink className="something-new" to="/something-new" onClick={()=>{dispatch(fetchProducts())}}>Something New</NavLink>
+                <NavLink className="categories something-new" to="/something-new" onClick={()=>{dispatch(fetchProducts())}}>Something New</NavLink>
             </div>
 
             <div>
-                <NavLink className="something-borrowed" to="/something-borrowed" onClick={()=>{dispatch(fetchProducts())}}>Something Borrowed</NavLink>
+                <NavLink className="categories something-borrowed" to="/something-borrowed" onClick={()=>{dispatch(fetchProducts())}}>Something Borrowed</NavLink>
             </div>
 
             <div>
-                <NavLink className="something-blue" to="/something-blue" onClick={()=>{dispatch(fetchProducts())}}>Something Blue</NavLink>
+                <NavLink className="categories something-blue" to="/something-blue" onClick={()=>{dispatch(fetchProducts())}}>Something Blue</NavLink>
             </div>
 
         </div>
