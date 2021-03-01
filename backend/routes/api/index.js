@@ -4,6 +4,7 @@ const usersRouter = require('./users.js');
 const productRouter = require('./productListing.js');
 const cartRouter = require('./cart.js');
 const searchRouter = require('./search.js');
+const categoryRouter = require('./productCategory.js');
 
 // GET /api/set-token-cookie
 const asyncHandler = require('express-async-handler');
@@ -51,5 +52,7 @@ router.use('/products', productRouter);
 router.use('/cart', cartRouter);
 
 router.use('/search', searchRouter);
+
+router.use('/category', categoryRouter);
 
 module.exports = router;
