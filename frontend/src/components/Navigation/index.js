@@ -6,6 +6,7 @@ import LoginFormModal from '../LoginFormModal';
 import './Navigation.css';
 import SearchBar from '../Search/SearchBar';
 import ShoppingCartIcon from '../Cart/ShoppingCartIcon';
+import SecondNav from '../SecondNav/SecondNav.js';
 
 function Navigation({ isLoaded }){
   const sessionUser = useSelector(state => state.session.user);
@@ -28,15 +29,20 @@ function Navigation({ isLoaded }){
   }
 
   return (
-    <ul>
-      <li >
-        <div className="navbar">
-          <NavLink className="sixpence-logo" exact to="/">Sixpence</NavLink>
-          <SearchBar />
-          {isLoaded && sessionLinks}
-        </div>
-      </li>
-    </ul>
+    <div className="nav-container">
+      <ul>
+        <li >
+          <div className="navbar">
+            <NavLink className="sixpence-logo" exact to="/">Sixpence</NavLink>
+            <SearchBar />
+            {isLoaded && sessionLinks}
+          </div>
+        </li>
+      </ul>
+      <div className="second-nav-container">
+        <SecondNav />
+      </div>
+    </div>
   );
 }
 
