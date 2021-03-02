@@ -16,8 +16,15 @@ function SearchBar(){
     }
 
     return(
-        <form onSubmit={handleSubmit}>
-            <input className="search" type="text" placeholder="Search for your Wedding Essentials" name="term" value={search} onChange={(e)=> {setSearch(e.target.value)}} />
+        <form className="nav-search_form" onSubmit={handleSubmit}>
+            <input
+                className="search"
+                type="text"
+                placeholder="Search for your Wedding Essentials"
+                name="term"
+                value={search}
+                onChange={(e)=> {setSearch(e.target.value)}}
+            />
         </form>
     )
 }
