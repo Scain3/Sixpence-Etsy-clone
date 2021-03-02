@@ -59,6 +59,7 @@ export const fetchSetProducts = (product) => async(dispatch) => {
 const initialState = {
     title: " ",
     description: " ",
+    category: " ",
     image: " ",
     price: " "
 }

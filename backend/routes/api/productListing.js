@@ -28,6 +28,7 @@ router.post('/add-a-listing', asyncHandler(async(req, res, next) => {
     const product = await ProductListing.create({
         sellerId: req.body.sellerId,
         title: req.body.title,
+        category: req.body.category,
         description: req.body.description,
         image: req.body.image,
         price: req.body.price
