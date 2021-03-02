@@ -2,24 +2,24 @@
 const { User } = require("../models");
 module.exports = {
   up: async(queryInterface, Sequelize) => {
-    const seller1 = await User.findOne({
-      where: {
-        username: 'Demo-lition'
-      }
-    })
-    const seller2 = await User.findOne({
-      where: {
-        username: 'FakeUser1'
-      }
-    })
-    const seller3 = await User.findOne({
-      where: {
-        username: 'FakeUser2'
-      }
-    })
+    // const seller1 = await User.findOne({
+    //   where: {
+    //     username: 'Demo-lition'
+    //   }
+    // })
+    // const seller2 = await User.findOne({
+    //   where: {
+    //     username: 'FakeUser1'
+    //   }
+    // })
+    // const seller3 = await User.findOne({
+    //   where: {
+    //     username: 'FakeUser2'
+    //   }
+    // })
    return queryInterface.bulkInsert('ProductListings', [
      {
-       sellerId: seller1.id,
+       sellerId: 1,
        title: 'Raindrops on Roses',
        category: 'Something New',
        description: `Celebrate your autumn wedding with beautiful red roses.
@@ -32,7 +32,7 @@ module.exports = {
        updatedAt: new Date()
      },
      {
-      sellerId: seller2.id,
+      sellerId: 2,
       title: 'Unveil the Bride: As seen on Project Runway',
       category: 'Something Old',
       description: `I wore this veil to my own wedding and I never thought I could feel so beautiful.
@@ -45,7 +45,7 @@ module.exports = {
        updatedAt: new Date()
      },
      {
-      sellerId: seller3.id,
+      sellerId: 3,
       title: 'Vintage Inspired Gown',
       category: 'Something Old',
       description: `This Natalie Wood inspired wedding gown is a dream. As a fashion design student,
@@ -59,7 +59,7 @@ module.exports = {
        updatedAt: new Date()
      },
      {
-      sellerId: seller1.id,
+      sellerId: 1,
       title: 'Victorian Wedding Gown',
       category: 'Something Old',
       description: `I've decided it's time to put my wedding dress on the market.
@@ -72,9 +72,9 @@ module.exports = {
       updatedAt: new Date()
     },
     {
-     sellerId: seller2.id,
+     sellerId: 2,
      title: 'Doggy Bride',
-     category: 'Something Old'
+     category: 'Something Old',
      description: `My beautful pup is all grown up now and has now celebrated
                   her wedding day. She is now no longer in need of this veil so
                   I'll be happy to give this puppy veil to the next doggy bride in need.`,
@@ -84,7 +84,7 @@ module.exports = {
       updatedAt: new Date()
     },
     {
-     sellerId: seller3.id,
+     sellerId: 3,
      title: 'Twirl Ready Gown',
      category: 'Something New',
      description: `This gown means a lot to me as it was the first wedding gown I ever designed
@@ -97,7 +97,7 @@ module.exports = {
       updatedAt: new Date()
     },
     {
-      sellerId: seller1.id,
+      sellerId: 1,
       title: 'Blue Bridesmaids Gown',
       category: 'Something Blue',
       description: `Pick a gown your bridesmaids will love and get your
@@ -108,7 +108,7 @@ module.exports = {
       updatedAt: new Date()
     },
     {
-     sellerId: seller2.id,
+     sellerId: 2,
      title: 'Your Something Borrowed',
      category: 'Something Borrowed',
      description: `I'm not ready to part with my wedding gown but I'm
@@ -121,7 +121,7 @@ module.exports = {
       updatedAt: new Date()
     },
     {
-     sellerId: seller3.id,
+     sellerId: 3,
      title: 'Diamond Saphire Necklace',
      category: 'Something Borrowed',
      description: `This diamond saphire necklace is a part of the Something Borrowed exchange program.
@@ -134,7 +134,7 @@ module.exports = {
       updatedAt: new Date()
     },
     {
-      sellerId: seller1.id,
+      sellerId: 1,
       title: 'Sunflower Bouquet',
       category: 'Something New',
       description: `I've arranged this bouquet to match a bride with spunk and personality.
@@ -145,7 +145,7 @@ module.exports = {
       updatedAt: new Date()
     },
     {
-     sellerId: seller2.id,
+     sellerId: 2,
      title: 'Blue Strapped Shoes',
      category: 'Something Blue',
      description: `Get your Something Blue right here as a unique touch to your outfit.
@@ -156,7 +156,7 @@ module.exports = {
       updatedAt: new Date()
     },
     {
-     sellerId: seller3.id,
+     sellerId: 3,
      title: 'Wedding Shoes',
      category: 'Something Old',
      description: `Aside from being gorgeous, these are actually pretty comfortable.
@@ -168,7 +168,7 @@ module.exports = {
       updatedAt: new Date()
     },
     {
-      sellerId: seller1.id,
+      sellerId: 1,
       title: 'Blue Bridal Gown',
       category: 'Something Blue',
       description: `Who says you have to wear white on your wedding day. Get the perfect gown
@@ -179,7 +179,7 @@ module.exports = {
       updatedAt: new Date()
     },
     {
-     sellerId: seller2.id,
+     sellerId: 2,
      title: 'Mother of the Bride Gown',
      category: 'Something Blue',
      description: `Is it white and gold or is it black and blue?
@@ -190,7 +190,7 @@ module.exports = {
       updatedAt: new Date()
     },
     {
-     sellerId: seller3.id,
+     sellerId: 3,
      title: 'Mermaid Gown',
      category: 'Something Old',
      description: `This is  a designer piece that I got on sale
@@ -202,7 +202,7 @@ module.exports = {
       updatedAt: new Date()
     },
     {
-      sellerId: seller1.id,
+      sellerId: 1,
       title: 'Mermaid Gown With Shawl',
       category: 'Something New',
       description: `This mermaid gown is truly stunning and the shall adds
@@ -213,7 +213,7 @@ module.exports = {
       updatedAt: new Date()
     },
     {
-     sellerId: seller2.id,
+     sellerId: 2,
      title: 'Princess Gown',
      category: 'Something New',
      description: `Feel like a princess in this bridal gown. You won't
@@ -224,7 +224,7 @@ module.exports = {
       updatedAt: new Date()
     },
     {
-     sellerId: seller3.id,
+     sellerId: 3,
      title: 'Brown Bridesmaids Gown',
      category: 'Something Old',
      description: `My best friend forced us to wear this brown dress for her wedding.
