@@ -11,13 +11,13 @@ function ProductItem(props){
 
 
 
-    const handleClick = () => {
-        if(!user){
-         return history.push('/login');
-        }
-        const productId = productItem.id;
-        dispatch(addItemToCart(productId, user.id));
-    }
+    // const handleClick = () => {
+    //     if(!user){
+    //      return history.push('/login');
+    //     }
+    //     const productId = productItem.id;
+    //     dispatch(addItemToCart(productId, user.id));
+    // }
 
     return(
         <div key={productItem.title}>
