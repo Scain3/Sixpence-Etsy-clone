@@ -11,6 +11,10 @@
 
 .oldItem-obj, .newItem-obj, .borrowed-obj, .blueItem-obj{
     margin: 10px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .old-img, .new-img, .borrowed-img, .blue-img{
