@@ -1,5 +1,6 @@
 import {useSelector} from "react-redux";
 import {useParams, useHistory} from "react-router-dom";
+import './Category.css';
 
 function SomethingBorrowed(){
     const history = useHistory();
@@ -13,7 +14,7 @@ function SomethingBorrowed(){
            <div className="category-map">{
                borrowed && borrowed.map((borrowedItem, index) => (
                    <div className="borrowed-obj" key={index}>
-                       <div><img className="new-img" src={borrowedItem.image} /></div>
+                       <div><img className="borrowed-img" src={borrowedItem.image} /></div>
                    </div>
                ))
            }

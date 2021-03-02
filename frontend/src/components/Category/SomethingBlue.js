@@ -1,5 +1,6 @@
 import {useSelector} from "react-redux";
 import {useParams, useHistory} from "react-router-dom";
+import './Category.css';
 
 function SomethingBlue(){
     const history = useHistory();
@@ -13,7 +14,7 @@ function SomethingBlue(){
            <div className="category-map">{
                blue && blue.map((blueItem, index) => (
                    <div className="blueItem-obj" key={index}>
-                       <div><img className="new-img" src={blueItem.image} /></div>
+                       <div><img className="blue-img" src={blueItem.image} /></div>
                    </div>
                ))
            }

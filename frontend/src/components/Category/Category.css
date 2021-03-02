@@ -1,0 +1,19 @@
+.category-div{
+
+}
+
+.category-map{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.oldItem-obj, .newItem-obj, .borrowed-obj, .blueItem-obj{
+    margin: 10px;
+}
+
+.old-img, .new-img, .borrowed-img, .blue-img{
+    height: 300px;
+    width: 300px;
+}

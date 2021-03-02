@@ -1,12 +1,12 @@
 import {useSelector} from "react-redux";
 import {useParams, useHistory} from "react-router-dom";
+import './Category.css';
 
 function SomethingOld(){
     const history = useHistory();
     const products = useSelector(state => Object.values(state.products));
     const old = products.filter((product) => product.category === "Something Old");
-    console.log(products);
-    console.log(old);
+    
 
     return(
        <div className="category-div">

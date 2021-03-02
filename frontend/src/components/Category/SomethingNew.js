@@ -1,5 +1,6 @@
 import {useSelector} from "react-redux";
 import {useParams, useHistory} from "react-router-dom";
+import './Category.css';
 
 function SomethingNew(){
     const history = useHistory();
