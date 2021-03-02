@@ -12,6 +12,7 @@ import SingleProductPage from "./components/ProductPage/SingleProduct";
 import CreateFormPage from "./components/ProductPage/CreateForm";
 import SomethingOld from "./components/Category/SomethingOld";
 import SomethingNew from "./components/Category/SomethingNew";
+import SomethingBorrowed from "./components/Category/SomethingBorrowed";
 
 function App() {
   const dispatch = useDispatch();
@@ -51,6 +52,9 @@ function App() {
           </Route>
           <Route path="/something-new">
             <SomethingNew />
+          </Route>
+          <Route path="/something-borrowed">
+            <SomethingBorrowed />
           </Route>
         </Switch>
       )}
