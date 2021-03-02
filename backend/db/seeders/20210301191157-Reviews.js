@@ -3,40 +3,40 @@ const { User, ProductListing } = require("../models");
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    const user1 = await User.findOne({
-      where: {
-        username: 'Demo-lition'
-      }
-    })
-    const user2 = await User.findOne({
-      where: {
-        username: 'FakeUser1'
-      }
-    })
-    const user3 = await User.findOne({
-      where: {
-        username: 'FakeUser2'
-      }
-    })
-    const product1 = await ProductListing.findOne({
-      where: {
-        title: 'Victorian Wedding Gown'
-      }
-    })
-    const product2 = await ProductListing.findOne({
-      where: {
-        title: 'Doggy Bride'
-      }
-    })
-    const product3 = await ProductListing.findOne({
-      where: {
-        title: 'Twirl Ready Gown'
-      }
-    })
+    // const user1 = await User.findOne({
+    //   where: {
+    //     username: 'Demo-lition'
+    //   }
+    // })
+    // const user2 = await User.findOne({
+    //   where: {
+    //     username: 'FakeUser1'
+    //   }
+    // })
+    // const user3 = await User.findOne({
+    //   where: {
+    //     username: 'FakeUser2'
+    //   }
+    // })
+    // const product1 = await ProductListing.findOne({
+    //   where: {
+    //     title: 'Victorian Wedding Gown'
+    //   }
+    // })
+    // const product2 = await ProductListing.findOne({
+    //   where: {
+    //     title: 'Doggy Bride'
+    //   }
+    // })
+    // const product3 = await ProductListing.findOne({
+    //   where: {
+    //     title: 'Twirl Ready Gown'
+    //   }
+    // })
     return queryInterface.bulkInsert('Reviews', [
       {
-        userId: user2.id,
-        productId: product1.id,
+        userId: 2,
+        productId: 1,
         starRating:5,
         description: `I bought demo-litions wedding dress
                       and it was very well taken care of.
@@ -49,8 +49,8 @@ module.exports = {
         updatedAt: new Date()
       },
       {
-        userId: user3.id,
-        productId: product2.id,
+        userId: 3,
+        productId: 2,
         starRating: 5,
         description: `I nearly broke down in tears when my dog,Lucy,
                       walked down the aisle in this gown. You neve
@@ -60,8 +60,8 @@ module.exports = {
         updatedAt: new Date()
       },
       {
-        userId: user1.id,
-        productId: product3.id,
+        userId: 1,
+        productId: 3,
         starRating: 5,
         description: `I honestly feel bad for taking this gown off of this
                         designer's hands for such a steal. I purchased this
@@ -78,4 +78,3 @@ module.exports = {
     return queryInterface.bulkDelete('Reviews', null, {})
   }
 };
-
