@@ -10,6 +10,7 @@ import SearchProductPage from "./components/Search/SearchProductPage";
 import ShoppingCart from "./components/Cart/ShoppingCart";
 import SingleProductPage from "./components/ProductPage/SingleProduct";
 import CreateFormPage from "./components/ProductPage/CreateForm";
+import SomethingOld from "./components/Category/SomethingOld";
 
 function App() {
   const dispatch = useDispatch();
@@ -43,6 +44,9 @@ function App() {
           </Route>
           <Route exact path="/">
             <Productpage />
+          </Route>
+          <Route path="/something-old">
+            <SomethingOld />
           </Route>
         </Switch>
       )}
