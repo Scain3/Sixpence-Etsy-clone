@@ -13,6 +13,7 @@ import CreateFormPage from "./components/ProductPage/CreateForm";
 import SomethingOld from "./components/Category/SomethingOld";
 import SomethingNew from "./components/Category/SomethingNew";
 import SomethingBorrowed from "./components/Category/SomethingBorrowed";
+import SomethingBlue from "./components/Category/SomethingBlue";
 
 function App() {
   const dispatch = useDispatch();
@@ -55,6 +56,9 @@ function App() {
           </Route>
           <Route path="/something-borrowed">
             <SomethingBorrowed />
+          </Route>
+          <Route path="/something-blue">
+            <SomethingBlue />
           </Route>
         </Switch>
       )}

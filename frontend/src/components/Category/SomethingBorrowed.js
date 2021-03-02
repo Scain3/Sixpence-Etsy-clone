@@ -12,7 +12,7 @@ function SomethingBorrowed(){
        <div className="category-div">
            <div className="category-map">{
                borrowed && borrowed.map((borrowedItem, index) => (
-                   <div className="newItem-obj" key={index}>
+                   <div className="borrowed-obj" key={index}>
                        <div><img className="new-img" src={borrowedItem.image} /></div>
                    </div>
                ))
