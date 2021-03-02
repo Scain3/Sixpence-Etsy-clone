@@ -1,0 +1,18 @@
+.search-landing-div{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.product-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* margin: 10px; */
+}
+
+.product-title{
+    font-size: 15px;
+    font-weight: bold;
+}

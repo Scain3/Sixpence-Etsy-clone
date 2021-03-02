@@ -8,12 +8,12 @@ function SearchProductPage(){
     const products = useSelector(state => state.search);
 
     return(
-        <div>
+        <div className="search-landing-div">
             {products.map((product)=>(
-                <div key={product.title} onClick={()=>history.push(`product/${product.id}`)}>
+                <div className="product-div" key={product.title} onClick={()=>history.push(`product/${product.id}`)}>
                     <img className="images" src={product.image} alt={product.title} />
-                    <h1>{product.title}</h1>
-                    <h3>{product.price}</h3>
+                    <div calssName="product-title">{product.title}</div>
+                    <div className="product-price">{product.price}</div>
                 </div>
             ))}
         </div>
