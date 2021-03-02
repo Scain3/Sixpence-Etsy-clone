@@ -23,8 +23,8 @@ function ProductItem(props){
         <div key={productItem.title}>
             <div className="image-block" >
                 <img className="images" src={productItem.image} alt={productItem.title} onClick={()=> history.push(`/product/${productItem.id}`)} />
-                <h4>${productItem.price}</h4>
-                <button onClick={handleClick}>Add To Cart</button>
+                <h4 className="product-price">${productItem.price}</h4>
+                {/* <button onClick={handleClick}>Add To Cart</button> */}
             </div>
         </div>
     )

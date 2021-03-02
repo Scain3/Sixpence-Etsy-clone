@@ -12,6 +12,11 @@
       margin: 15px;
   }
 
+  .product-price{
+    margin-top: 0;
+
+  }
+
   .description{
     display: flex;
     align-items: flex-start;
@@ -30,10 +35,11 @@
   }
 
   .image-block{
-    display: block;
-    flex-direction: vertical;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
   }
 
   .createFormContainer{
