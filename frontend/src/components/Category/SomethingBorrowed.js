@@ -15,6 +15,8 @@ function SomethingBorrowed(){
                borrowed && borrowed.map((borrowedItem, index) => (
                    <div className="borrowed-obj" key={index}>
                        <div><img className="borrowed-img" src={borrowedItem.image} /></div>
+                       <div><h3 className="borrowed-title">{borrowed.title}</h3></div>
+                       <div><h3 className="borrowed-price">{borrowed.price}</h3></div>
                    </div>
                ))
            }

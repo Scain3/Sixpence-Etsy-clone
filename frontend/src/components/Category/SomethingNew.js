@@ -15,6 +15,8 @@ function SomethingNew(){
                newProduct && newProduct.map((newItem, index) => (
                    <div className="newItem-obj" key={index}>
                        <div><img className="new-img" src={newItem.image} /></div>
+                       <div><h3 className="new-title">{newItem.title}</h3></div>
+                       <div><h3 className="new-price">{newItem.price}</h3></div>
                    </div>
                ))
            }

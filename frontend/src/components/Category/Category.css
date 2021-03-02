@@ -17,3 +17,11 @@
     height: 200px;
     width: 200px;
 }
+
+.blue-title, .borrowed-title, .new-title, .old-title{
+    margin-top: 0;
+}
+
+.blue-price, .borrowed-price, .new-price, .old-price{
+    margin-top: 0;
+}

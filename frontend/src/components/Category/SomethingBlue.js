@@ -15,6 +15,8 @@ function SomethingBlue(){
                blue && blue.map((blueItem, index) => (
                    <div className="blueItem-obj" key={index}>
                        <div><img className="blue-img" src={blueItem.image} /></div>
+                       <div><h3 className="blue-title">{blueItem.title}</h3></div>
+                       <div><h3 className="blue-price">{blueItem.price}</h3></div>
                    </div>
                ))
            }
