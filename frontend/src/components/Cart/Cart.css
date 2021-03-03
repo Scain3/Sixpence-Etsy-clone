@@ -3,3 +3,16 @@
     margin-left: 15px;
     cursor: pointer;
 }
+
+.remove-button{
+    background-color: black;
+    color: white;
+    font-family: 'Shippori Mincho B1', serif;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.cart-amount-display{
+    font-family: 'Shippori Mincho B1', serif;
+    text-align: center;
+}
