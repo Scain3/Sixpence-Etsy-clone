@@ -44,12 +44,12 @@
 
   .createFormContainer{
     display: flex;
-    border: 3px solid black;
+    border: 1px dotted orange;
     border-radius: 40px;
     background-color: aliceblue;
     width: 500px;
     height: 500px;
-    margin: auto;
+    margin: 20px auto;
   }
 
   .createForm{
