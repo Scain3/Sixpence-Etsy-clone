@@ -97,6 +97,7 @@ border-radius: 5px;
   margin-top: -20px;
   position: relative;
   display: inline-block;
+  cursor: pointer;
 }
 
 .profile-dropdown{

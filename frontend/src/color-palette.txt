@@ -1,0 +1,6 @@
+color palette
+Dark Jungle Green: #182825
+Outrageous Orange: #FC7753
+Tea Green: #DAEFB3
+Wintergreen Dream: #4C8577
+
