@@ -19,7 +19,7 @@
 
   .product-price{
     margin-top: 0;
-
+    font-family: 'Shippori Mincho B1', serif;
   }
 
   .description{
@@ -32,6 +32,8 @@
     display: flex;
     text-align: left;
     font-size: 20px;
+    font-family: 'Shippori Mincho B1', serif;
+    text-align: center;
   }
 
   .single-image{
@@ -85,3 +87,19 @@
     height: 30px;
     line-height: 25px;
   } */
+
+  .single-title{
+    font-family: 'Shippori Mincho B1', serif;
+  }
+
+  .single-price{
+    font-family: 'Shippori Mincho B1', serif;
+  }
+
+  .cart-button{
+    background-color: black;
+    color: white;
+    font-family: 'Shippori Mincho B1', serif;
+    font-size: 15px;
+    cursor: pointer;
+  }

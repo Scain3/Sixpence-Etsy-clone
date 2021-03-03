@@ -24,7 +24,7 @@ function Productpage(){
     if(user){
         return(
             <div>
-                <h1>Welcome to Sixpence, {user.username}</h1>
+                <h1 className="welcome-message">Welcome to Sixpence, {user.username}</h1>
                 <div className="productContainer">
                 {productsArr.map((productItem)=>(
                     <ProductItem key={productItem.id} product={productItem} />

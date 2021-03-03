@@ -35,10 +35,10 @@ function SingleProductPage(){
         <div className="productContainer">
                 <div>
                     <div className="image-block">
-                        <h1>{singleItem.title}</h1>
+                        <h1 className="single-title">{singleItem.title}</h1>
                         <img className="single-image" src={singleItem.image} alt={singleItem.title} />
-                        <h4>${singleItem.price}</h4>
-                        <button onClick={handleClick}>Add To Cart</button>
+                        <h4 className="single-price">${singleItem.price}</h4>
+                        <button className="cart-button" onClick={handleClick}>Add To Cart</button>
                     </div>
                     <div className="description">
                             <p>{singleItem.description}</p>
