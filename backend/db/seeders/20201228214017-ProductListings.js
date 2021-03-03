@@ -33,7 +33,7 @@ module.exports = {
      },
      {
       sellerId: 2,
-      title: 'Unveil the Bride: As seen on Project Runway',
+      title: 'Unveil the Bride',
       category: 'Something Old',
       description: `I wore this veil to my own wedding and I never thought I could feel so beautiful.
                     Everyone said I looked just like a run-way model. Now I'm happy to re-sale this used
