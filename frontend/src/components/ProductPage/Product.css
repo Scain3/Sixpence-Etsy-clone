@@ -1,3 +1,8 @@
+.welcome-message{
+  font-family: 'Shippori Mincho B1', serif;
+  text-align: center;
+}
+
 .productContainer{
     display: flex;
     flex-direction: row;
