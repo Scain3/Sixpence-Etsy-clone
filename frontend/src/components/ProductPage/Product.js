@@ -23,7 +23,7 @@ function Productpage(){
     const productsArr = Object.values(products);
     if(user){
         return(
-            <div>
+            <div className="top-home-div">
                 <h1 className="welcome-message">Welcome to Sixpence, {user.username}</h1>
                 <div className="productContainer">
                 {productsArr.map((productItem)=>(
