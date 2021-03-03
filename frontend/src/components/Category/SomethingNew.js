@@ -11,7 +11,7 @@ function SomethingNew(){
 
     return(
        <div className="category-div">
-           <p><strong>Something New</strong>is the second line in the traditional rhyme representing good luck to the wedding and marriage. Here at Sixpence a bride can find brand new items to bring good luck to the wedding day.</p>
+           <p className="category-paragraph">Something New is the second line in the traditional rhyme representing good luck to the wedding and marriage. Here at Sixpence a bride can find brand new items to bring good luck to the wedding day.</p>
            <div className="category-map">{
                newProduct && newProduct.map((newItem, index) => (
                    <div className="newItem-obj" key={index}>

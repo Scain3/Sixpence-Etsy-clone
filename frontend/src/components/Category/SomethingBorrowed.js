@@ -11,7 +11,7 @@ function SomethingBorrowed(){
 
     return(
        <div className="category-div">
-           <p><strong>Something Borrowed</strong>is the third line in the traditional rhyme representing good luck to the wedding and marriage. Here at Sixpence a bride can borrow items from another generous bride who is not officially ready to part with that item. Borrowing an item brings good luck to the wedding day.</p>
+           <p className="category-paragraph">Something Borrowed is the third line in the traditional rhyme representing good luck to the wedding and marriage. Here at Sixpence a bride can borrow items from another generous bride who is not officially ready to part with that item. Borrowing an item brings good luck to the wedding day.</p>
            <div className="category-map">{
                borrowed && borrowed.map((borrowedItem, index) => (
                    <div className="borrowed-obj" key={index}>

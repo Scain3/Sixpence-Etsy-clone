@@ -9,6 +9,12 @@
 
 }
 
+.category-paragraph{
+    margin: 0 100px;
+    text-align: center;
+
+}
+
 .oldItem-obj, .newItem-obj, .borrowed-obj, .blueItem-obj{
     margin: 10px;
     cursor: pointer;

@@ -11,7 +11,7 @@ function SomethingOld(){
 
     return(
        <div className="category-div">
-           <p><strong> Something Old </strong> is the first line in the traditional rhyme representing good luck to the wedding and marriage. Here at Sixpence a bride can find gently used items to bring good luck to the wedding day.</p>
+           <p className="category-paragraph">Something Old is the first line in the traditional rhyme representing good luck to the wedding and marriage. Here at Sixpence a bride can find gently used items to bring good luck to the wedding day.</p>
            <div className="category-map">{
                old && old.map((oldItem, index) => (
                    <div className="oldItem-obj" key={index} onClick={()=>history.push(`product/${oldItem.id}`)}>
