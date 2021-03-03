@@ -24,10 +24,10 @@ function ShoppingCart(){
     <div>
       <CartItemsHeader howManyItems={cartArr.length} />
 
-      <div>
+      <div className="map-container">
       {cartArr.map((cartItem) => (
 
-        <div key={cartItem.title}>
+        <div className="cartItem" key={cartItem.title}>
           <h3>{cartItem.title}</h3>
           <img className="images" src={cartItem.image} alt={cartItem.title} />
           <p className="price">{cartItem.price}</p>

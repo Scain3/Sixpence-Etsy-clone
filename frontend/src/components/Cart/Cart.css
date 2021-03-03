@@ -4,6 +4,19 @@
     cursor: pointer;
 }
 
+.map-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cartItem{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+}
+
 .remove-button{
     background-color: black;
     color: white;
