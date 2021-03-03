@@ -30,8 +30,11 @@
 
 .blue-title, .borrowed-title, .new-title, .old-title{
     margin-top: 0;
+    font-family: 'Shippori Mincho B1', serif;
+    font-weight: bold;
 }
 
 .blue-price, .borrowed-price, .new-price, .old-price{
     margin-top: 0;
+    font-family: 'Shippori Mincho B1', serif;
 }
