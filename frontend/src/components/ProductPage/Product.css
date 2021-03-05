@@ -102,3 +102,12 @@
     font-size: 15px;
     cursor: pointer;
   }
+
+  .create-button{
+    background-color: black;
+    color: white;
+    font-family: 'Shippori Mincho B1', serif;
+    font-size: 15px;
+    cursor: pointer;
+    margin: 10px 10px;
+  }
