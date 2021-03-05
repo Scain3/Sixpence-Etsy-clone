@@ -32,7 +32,7 @@ function ProfileButton({ user }) {
 
   return (
     <>
-      <img className="profile-photo" alt="profile-photo" src="https://media.giphy.com/media/ZXkraFrlIW1D25M6ZJ/giphy.gif" onClick={openMenu} />
+      <img className="profile-photo" alt="profile" src="https://media.giphy.com/media/ZXkraFrlIW1D25M6ZJ/giphy.gif" onClick={openMenu} />
 
       {showMenu && (
         <ul className="profile-dropdown">
