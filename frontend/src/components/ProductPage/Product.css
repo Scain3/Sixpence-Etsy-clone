@@ -56,12 +56,15 @@
 
   .createFormContainer{
     display: flex;
-    border: 1px dotted orange;
+    flex-direction: column;
     border-radius: 40px;
-    background-color: aliceblue;
     width: 500px;
     height: 500px;
     margin: 20px auto;
+  }
+
+  .create-heading{
+    margin: 0 auto;
   }
 
   .createForm{
@@ -73,7 +76,7 @@
   .createInputs{
     border-radius: 5px;
     width: 250px;
-    height:25px;
+    height:50px;
     margin: 0 auto;
     margin-top: 10px;
     box-shadow: 0 1px 4px 0 rgba(34, 34, 34, 0.1)
@@ -110,4 +113,12 @@
     font-size: 15px;
     cursor: pointer;
     margin: 10px 10px;
+  }
+
+  .create-div{
+
+  }
+
+  .create-label{
+    
   }

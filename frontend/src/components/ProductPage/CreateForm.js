@@ -24,12 +24,24 @@ function CreateFormPage(){
 
     return(
         <div className="createFormContainer">
-            <h1>Add To Your Store</h1>
+            <h1 className="create-heading">Add To Your Store</h1>
             <form onSubmit={handleSubmit} className="createForm">
-                <input className="createInputs" type="text" placeholder="Create A Title" value={title} onChange={(e)=> {setTitle(e.target.value)} } />
-                <textarea className="createDescription" placeholder="Write A Fun Description" value={description} onChange={(e)=> {setDescription(e.target.value)}} />
-                <input className="createInputs" type="text" placeholder="Place Image Of Your Product" value={image} onChange={(e) => {setImage(e.target.value)}} />
-                <input className="createInputs" type="number" placeholder="Choose Your Price" value={price} onChange={(e) => {setPrice(e.target.value)}} />
+                <div className="create-div">
+                    <label className="create-label">Title</label>
+                    <input className="createInputs" type="text" placeholder="Create A Title" value={title} onChange={(e)=> {setTitle(e.target.value)} } />
+                </div>
+                <div className="create-div">
+                    <label className="create-label">Description</label>
+                    <textarea className="createDescription" placeholder="Write A Fun Description" value={description} onChange={(e)=> {setDescription(e.target.value)}} />
+                </div>
+                <div className="create-div">
+                    <label>Add Image</label>
+                    <input className="createInputs" type="text" placeholder="Place Image Of Your Product" value={image} onChange={(e) => {setImage(e.target.value)}} />
+                </div>
+                <div className="create-div">
+                    <label className="create-label">Choose Price</label>
+                    <input className="createInputs" type="number" placeholder="Choose Your Price" value={price} onChange={(e) => {setPrice(e.target.value)}} />
+                </div>
                 <button className="create-button">Add</button>
             </form>
         </div>
