@@ -10,7 +10,6 @@ function Productpage(){
     const products = useSelector(state => state.products);
     const user = useSelector(state => state.session.user);
     const dispatch = useDispatch();
-    console.log(user);
 
     useEffect(() => {
             dispatch(fetchProducts());

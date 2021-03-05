@@ -1,12 +1,11 @@
 import {useSelector} from "react-redux";
-import {useParams, useHistory} from "react-router-dom";
+import {useHistory} from "react-router-dom";
 import './Category.css';
 
 function SomethingBorrowed(){
     const history = useHistory();
     const products = useSelector(state => Object.values(state.products));
     const borrowed = products.filter((product) => product.category === "Something Borrowed");
-    console.log(products);
 
 
     return(

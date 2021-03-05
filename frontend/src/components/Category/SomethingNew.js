@@ -1,13 +1,11 @@
 import {useSelector} from "react-redux";
-import {useParams, useHistory} from "react-router-dom";
+import {useHistory} from "react-router-dom";
 import './Category.css';
 
 function SomethingNew(){
     const history = useHistory();
     const products = useSelector(state => Object.values(state.products));
     const newProduct = products.filter((product) => product.category === "Something New");
-    console.log(products);
-    console.log(newProduct);
 
     return(
        <div className="category-div">
