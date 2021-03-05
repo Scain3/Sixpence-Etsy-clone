@@ -40,7 +40,7 @@ function ProfileButton({ user }) {
           <li>{user.email}</li>
           <li><NavLink to="/add-a-product" className="link">Add A Listing</NavLink></li>
           <li>
-            <button onClick={logout}>Log Out</button>
+            <button className="logout" onClick={logout}>Log Out</button>
           </li>
         </ul>
       )}

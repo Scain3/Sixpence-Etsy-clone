@@ -145,3 +145,11 @@ border-radius: 5px;
   height: 60px;
   margin-top: 0px;
 }
+
+.logout{
+  background-color: black;
+  color: white;
+  font-family: 'Shippori Mincho B1', serif;
+  font-size: 12px;
+  cursor: pointer;
+}
