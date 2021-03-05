@@ -28,6 +28,18 @@ li{
   font-family: 'Shippori Mincho B1', serif;
 }
 
+.demo-container{
+
+}
+
+.demo-login{
+  margin: 15px 10px;
+  border: none;
+  background: none;
+  color: #36454F;
+  font-size: 15px;
+}
+
 .authentication-links{
   display: flex;
   flex-direction: row;

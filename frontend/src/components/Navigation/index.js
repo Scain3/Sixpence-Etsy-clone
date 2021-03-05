@@ -35,7 +35,7 @@ function Navigation({ isLoaded }){
     sessionLinks = (
       <div className="auth-links">
         <span className=".demo-container">
-          <button className="Demo-login" onClick={demoLogin}>Demo Login</button>
+          <button className="demo-login" onClick={demoLogin}>Demo Login</button>
         </span>
         <LoginFormModal />
         <NavLink to="/register" className="register">Register</NavLink>
