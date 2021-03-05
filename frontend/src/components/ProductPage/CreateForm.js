@@ -37,7 +37,7 @@ function CreateFormPage(){
                     <textarea className="createDescription" placeholder="Write A Fun Description" value={description} onChange={(e)=> {setDescription(e.target.value)}} />
                 </div>
                 <div className="create-div">
-                    <label>Add Image</label>
+                    <label className="create-label">Add Image</label>
                     <input className="createInputs" type="text" placeholder="Place Image Of Your Product" value={image} onChange={(e) => {setImage(e.target.value)}} />
                 </div>
                 <div className="create-div">
