@@ -17,7 +17,7 @@ function SomethingOld(){
                    <div className="oldItem-obj" key={index} onClick={()=>history.push(`product/${oldItem.id}`)}>
                        <div><img className="old-img" src={oldItem.image} /></div>
                        <div><h3 className="old-title">{oldItem.title}</h3></div>
-                       <div><h3 className="old-price">{oldItem.price}</h3></div>
+                       <div><h3 className="old-price">${oldItem.price}</h3></div>
                    </div>
                ))
            }

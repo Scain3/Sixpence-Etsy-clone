@@ -17,7 +17,7 @@ function SomethingNew(){
                    <div className="newItem-obj" key={index} onClick={()=> history.push(`/product/${newItem.id}`)}>
                        <div><img className="new-img" src={newItem.image} /></div>
                        <div><h3 className="new-title">{newItem.title}</h3></div>
-                       <div><h3 className="new-price">{newItem.price}</h3></div>
+                       <div><h3 className="new-price">${newItem.price}</h3></div>
                    </div>
                ))
            }
