@@ -56,7 +56,7 @@ function LoginForm() {
             />
         </div>
         <button type="submit" className="login-form-modal_submit">Log In</button>
-        <Link to="/signup" className="login-form_redirect">CREATE AN ACCOUNT</Link>
+        <Link to="/register" className="login-form_redirect">CREATE AN ACCOUNT</Link>
       </form>
     </>
   );
