@@ -14,7 +14,7 @@ function SomethingBlue(){
            <div className="category-map">{
                blue && blue.map((blueItem, index) => (
                    <div className="blueItem-obj" key={index} onClick={()=> history.push(`/product/${blueItem.id}`)}>
-                       <div><img className="blue-img" src={blueItem.image} /></div>
+                       <div><img className="blue-img" src={blueItem.image} alt={blueItem.title} /></div>
                        <div><h3 className="blue-title">{blueItem.title}</h3></div>
                        <div><h3 className="blue-price">${blueItem.price}</h3></div>
                    </div>

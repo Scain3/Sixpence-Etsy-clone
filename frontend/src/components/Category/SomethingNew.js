@@ -13,7 +13,7 @@ function SomethingNew(){
            <div className="category-map">{
                newProduct && newProduct.map((newItem, index) => (
                    <div className="newItem-obj" key={index} onClick={()=> history.push(`/product/${newItem.id}`)}>
-                       <div><img className="new-img" src={newItem.image} /></div>
+                       <div><img className="new-img" src={newItem.image} alt={newItem.title} /></div>
                        <div><h3 className="new-title">{newItem.title}</h3></div>
                        <div><h3 className="new-price">${newItem.price}</h3></div>
                    </div>
