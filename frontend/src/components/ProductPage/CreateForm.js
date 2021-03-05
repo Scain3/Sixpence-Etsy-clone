@@ -27,7 +27,9 @@ function CreateFormPage(){
             <h1 className="create-heading">Add To Your Store</h1>
             <form onSubmit={handleSubmit} className="createForm">
                 <div className="create-div">
-                    <label className="create-label">Title</label>
+                    <div className="create-label-div">
+                        <label className="create-label">Title</label>
+                    </div>
                     <input className="createInputs" type="text" placeholder="Create A Title" value={title} onChange={(e)=> {setTitle(e.target.value)} } />
                 </div>
                 <div className="create-div">
