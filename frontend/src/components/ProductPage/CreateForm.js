@@ -8,6 +8,14 @@ import "./Product.css";
 
 function CreateFormPage(){
     const [title, setTitle] = useState("");
+    const [loading, setLoading] = React.useState(true);
+    const [category, setCategory] = useState("");
+    console.log('category', category);
+    console.log('setCategory', setCategory);
+    // const [somethingOld, setSomethingOld] = useState("");
+    // const [somethingNew, setSomethingNew] = useState("");
+    // const [somethingBorrowed, setSomethingBorrowed] = useState("");
+    // const [somethingBlue, setSomethingBlue] = useState("");
     const [description, setDescription] = useState("");
     const [image, setImage] = useState("");
     const [price, setPrice] = useState(0);
@@ -31,6 +39,25 @@ function CreateFormPage(){
                         <label className="create-label">Title</label>
                     </div>
                     <input className="createInputs" type="text" placeholder="Create A Title" value={title} onChange={(e)=> {setTitle(e.target.value)} } />
+                </div>
+                <div className="create-label-div">
+                    <label className="create-label">Category</label>
+                    <select
+                        // disabled={loading}
+                        value={category}
+                        onChange={(e) => {
+                            const selectedCategory = e.target.value;
+                            setCategory(selectedCategory);
+                        }}
+                    >
+                        <option key='Something Old' value='somethingOld'>Something Old</option>
+                        <option key='Something New' value='somethingNew'>Something New</option>
+                        <option key='Something Borrowed' value='somethingBorrowed'>Something Borrowed</option>
+                        <option key='Something Blue' value='somethingBlue'>Something Blue</option>
+                        {console.log('category',category)}
+
+                    </select>
+
                 </div>
                 <div className="create-div">
                     <label className="create-label">Description</label>
