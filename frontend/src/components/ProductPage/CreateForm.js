@@ -8,10 +8,9 @@ import "./Product.css";
 
 function CreateFormPage(){
     const [title, setTitle] = useState("");
-    const [loading, setLoading] = React.useState(true);
+    //const [loading, setLoading] = React.useState(true);
     const [category, setCategory] = useState("");
     console.log('category', category);
-    console.log('setCategory', setCategory);
     // const [somethingOld, setSomethingOld] = useState("");
     // const [somethingNew, setSomethingNew] = useState("");
     // const [somethingBorrowed, setSomethingBorrowed] = useState("");
@@ -25,7 +24,7 @@ function CreateFormPage(){
 
     const handleSubmit = async(e) => {
         e.preventDefault();
-        const product = {sellerId: userId, title, description, image, price}
+        const product = {sellerId: userId, title, category, description, image, price}
        const newProduct = await dispatch(fetchSetProducts(product));
         history.push(`/product/${newProduct.id}`);
     }
@@ -48,12 +47,13 @@ function CreateFormPage(){
                         onChange={(e) => {
                             const selectedCategory = e.target.value;
                             setCategory(selectedCategory);
+                            console.log('setCategory', setCategory);
                         }}
                     >
-                        <option key='Something Old' value='somethingOld'>Something Old</option>
-                        <option key='Something New' value='somethingNew'>Something New</option>
-                        <option key='Something Borrowed' value='somethingBorrowed'>Something Borrowed</option>
-                        <option key='Something Blue' value='somethingBlue'>Something Blue</option>
+                        <option key='Something Old' value='Something Old'>Something Old</option>
+                        <option key='Something New' value='Something New'>Something New</option>
+                        <option key='Something Borrowed' value='Something Borrowed'>Something Borrowed</option>
+                        <option key='Something Blue' value='Something Blue'>Something Blue</option>
                         {console.log('category',category)}
 
                     </select>
