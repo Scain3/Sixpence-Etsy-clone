@@ -2,21 +2,7 @@
 const { User } = require("../models");
 module.exports = {
   up: async(queryInterface, Sequelize) => {
-    // const seller1 = await User.findOne({
-    //   where: {
-    //     username: 'Demo-lition'
-    //   }
-    // })
-    // const seller2 = await User.findOne({
-    //   where: {
-    //     username: 'FakeUser1'
-    //   }
-    // })
-    // const seller3 = await User.findOne({
-    //   where: {
-    //     username: 'FakeUser2'
-    //   }
-    // })
+ 
    return queryInterface.bulkInsert('ProductListings', [
      {
        sellerId: 1,

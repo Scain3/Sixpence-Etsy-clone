@@ -8,13 +8,7 @@ import "./Product.css";
 
 function CreateFormPage(){
     const [title, setTitle] = useState("");
-    //const [loading, setLoading] = React.useState(true);
     const [category, setCategory] = useState("");
-    console.log('category', category);
-    // const [somethingOld, setSomethingOld] = useState("");
-    // const [somethingNew, setSomethingNew] = useState("");
-    // const [somethingBorrowed, setSomethingBorrowed] = useState("");
-    // const [somethingBlue, setSomethingBlue] = useState("");
     const [description, setDescription] = useState("");
     const [image, setImage] = useState("");
     const [price, setPrice] = useState(0);
@@ -42,12 +36,11 @@ function CreateFormPage(){
                 <div className="create-label-div">
                     <label className="create-label">Category</label>
                     <select
-                        // disabled={loading}
+
                         value={category}
                         onChange={(e) => {
                             const selectedCategory = e.target.value;
                             setCategory(selectedCategory);
-                            console.log('setCategory', setCategory);
                         }}
                     >
                         <option key='Something Old' value='Something Old'>Something Old</option>
