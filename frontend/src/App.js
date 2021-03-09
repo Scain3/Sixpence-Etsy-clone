@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import SignupFormPage from "./components/SignupFormPage";
 import LoginFormPage from "./components/LoginFormPage";
 import * as sessionActions from "./store/session";
@@ -14,6 +14,7 @@ import SomethingOld from "./components/Category/SomethingOld";
 import SomethingNew from "./components/Category/SomethingNew";
 import SomethingBorrowed from "./components/Category/SomethingBorrowed";
 import SomethingBlue from "./components/Category/SomethingBlue";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   const dispatch = useDispatch();
@@ -23,7 +24,7 @@ function App() {
   }, [dispatch]);
 
   return (
-    <>
+    <BrowserRouter>
       <Navigation isLoaded={isLoaded} />
       {isLoaded && (
         <Switch>
@@ -62,7 +63,8 @@ function App() {
           </Route>
         </Switch>
       )}
-    </>
+      <Footer />
+    </BrowserRouter>
   );
 }
 
