@@ -35,6 +35,7 @@ function ShoppingCart(){
 
       ))}
       </div>
+      <button>Purchase</button>
     </div>
   )
 

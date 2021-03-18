@@ -3,6 +3,8 @@ const router = express.Router();
 const asyncHandler = (handler) => (req, res, next) => handler(req, res, next).catch(next);
 const { Cart, User, ProductListing } = require("../../db/models");
 
+
+//add to cart
 router.post('/:productListingId(\\d+)', asyncHandler(async(req, res, next) => {
     const user = await User.findByPk(req.body.userId);
 
@@ -13,7 +15,7 @@ router.post('/:productListingId(\\d+)', asyncHandler(async(req, res, next) => {
 
 
     })
-  
+
 
     const cartItem = await Cart.create(
 
@@ -38,6 +40,7 @@ router.post('/:productListingId(\\d+)', asyncHandler(async(req, res, next) => {
     })
 }))
 
+//remove from cart
 router.delete('/:cartId(\\d+)', asyncHandler(async(req, res, next) => {
     const cart = await Cart.findByPk(req.params.cartId);
     await cart.destroy();
@@ -45,5 +48,14 @@ router.delete('/:cartId(\\d+)', asyncHandler(async(req, res, next) => {
         message: 'Success!'
     })
 }))
+
+//purchase
+// router.delete('/:cartId(\\d+)', asyncHandler(async(req, res, next) => {
+//     const cart = await Cart.findByPk(req.params.cartId);
+//     await cart.destroy();
+//     res.json({
+//         message: 'Success!'
+//     })
+// }))
 
 module.exports = router;

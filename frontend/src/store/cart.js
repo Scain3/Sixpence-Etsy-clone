@@ -13,6 +13,10 @@ const addToCart = (item) => {
 const removeItem = (id) => {
     return {type: REMOVE_ITEM_FROM_CART, payload: id}
 }
+
+const purchaseItem = (id) => {
+    return {type: PURCHASE_ITEMS, payload: id}
+}
 //THUNK ACTION TO ADD ITEM TO CART
 export const addItemToCart = (productListingId, userId) => async(dispatch) => {
     const response = await fetch(`/api/cart/${productListingId}`, {
@@ -22,8 +26,6 @@ export const addItemToCart = (productListingId, userId) => async(dispatch) => {
 
         })
     });
-    // const cartItem = response.json();
-    // dispatch(addToCart(cartItem));
     dispatch(addToCart(response.data.cartItem));
 }
 
@@ -35,10 +37,15 @@ export const removeItemFromCart = (cartId) => async(dispatch) => {
 
     dispatch(removeItem(cartId))
 }
+export const purchaseItemFromCart = (cartId) => async(dispatch) => {
+    await fetch(`/api/cart/${cartId}`,{
+        method: 'DELETE'
+    });
 
-export const purchaseItems = (id) => {
-    return {type: PURCHASE_ITEMS, payload: id}
+    dispatch(purchaseItem(cartId))
 }
+
+
 
 
 const cartReducer = (state={}, action) => {
