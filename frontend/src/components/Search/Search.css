@@ -9,7 +9,6 @@
     flex-direction: column;
     justify-content: center;
     flex-wrap: wrap;
-    /* margin: 10px; */
 }
 
 .product-obj{
@@ -28,3 +27,30 @@
     font-size: 20px;
     font-weight: bold;
 }
+
+.form-container{
+    border: 1px solid black;
+    border-radius: 50px;
+}
+
+.search{
+    border: none;
+    background: transparent;
+    justify-content: center;
+    color: #222222;
+    font-size: 16px;
+    line-height: 28px;
+    height: 40px;
+    width: 50rem;
+    outline: none;
+  }
+
+  .nav-search__submit{
+      border: none;
+      background: none;
+      cursor: pointer;
+  }
+
+  .search input{
+    margin-left: 50px;
+  }

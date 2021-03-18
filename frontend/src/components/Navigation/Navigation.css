@@ -4,7 +4,7 @@ li{
   display: flex;
 }
 
-.search{
+/* .search{
   border-radius: 50px;
   width: 1000px;
   background: transparent;
@@ -18,7 +18,7 @@ li{
 
 .search input{
   margin-left: 50px;
-}
+} */
 
 .sixpence-logo{
   color: rgb(255, 123, 0);
