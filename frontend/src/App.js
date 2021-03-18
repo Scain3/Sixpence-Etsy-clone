@@ -15,6 +15,7 @@ import SomethingNew from "./components/Category/SomethingNew";
 import SomethingBorrowed from "./components/Category/SomethingBorrowed";
 import SomethingBlue from "./components/Category/SomethingBlue";
 import Footer from "./components/Footer/Footer";
+import ConfirmPurchase from "./components/Cart/Purchase";
 
 function App() {
   const dispatch = useDispatch();
@@ -60,6 +61,9 @@ function App() {
           </Route>
           <Route path="/something-blue">
             <SomethingBlue />
+          </Route>
+          <Route path="/confirm-purchase">
+            <ConfirmPurchase />
           </Route>
         </Switch>
       )}
