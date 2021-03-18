@@ -28,6 +28,7 @@ function SingleProductPage(){
          return history.push('/login');
         }
         dispatch(addItemToCart(singleItem.id, user.id));
+        history.push('/cart');
     }
 
     if(!singleItem) return null
