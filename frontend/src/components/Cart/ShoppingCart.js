@@ -1,5 +1,6 @@
 import {useSelector, useDispatch} from "react-redux";
-import {removeItemFromCart} from "../../store/cart";
+import {useHistory} from "react-router-dom";
+import {removeItemFromCart, purchaseItemFromCart} from "../../store/cart";
 import './Cart.css';
 
 function CartItemsHeader({howManyItems}) {
@@ -12,11 +13,21 @@ function CartItemsHeader({howManyItems}) {
 
 function ShoppingCart(){
   const cart = useSelector(state => state.cart);
+  const history = useHistory();
 
   const cartArr = Object.values(cart);
   const dispatch = useDispatch();
 
   if(cartArr.length === 0) return <h1 className="cart-amount-display">Your cart is empty!</h1>
+
+  const purchase = () => {
+    cartArr.map(cartItem => (
+        <div>
+            {dispatch(purchaseItemFromCart(cartItem.id))}
+        </div>
+    ))
+    return history.push('/confirm-purchase');
+}
 
 
   return(
@@ -35,7 +46,7 @@ function ShoppingCart(){
 
       ))}
       </div>
-      <button>Purchase</button>
+      <button onClick={purchase}>Purchase</button>
     </div>
   )
 
