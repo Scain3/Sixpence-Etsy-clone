@@ -4,6 +4,12 @@
     cursor: pointer;
 }
 
+.cart-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .map-container{
     display: flex;
     flex-direction: column;
@@ -23,6 +29,15 @@
     font-family: 'Shippori Mincho B1', serif;
     font-size: 15px;
     cursor: pointer;
+}
+
+.purchase-button{
+    background-color: black;
+    color: white;
+    font-family: 'Shippori Mincho B1', serif;
+    font-size: 15px;
+    cursor: pointer;
+    margin: 10px auto;
 }
 
 .cart-amount-display{

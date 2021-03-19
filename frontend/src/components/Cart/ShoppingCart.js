@@ -31,7 +31,7 @@ function ShoppingCart(){
 
 
   return(
-    <div>
+    <div className="cart-container">
       <CartItemsHeader howManyItems={cartArr.length} />
 
       <div className="map-container">
@@ -46,7 +46,7 @@ function ShoppingCart(){
 
       ))}
       </div>
-      <button onClick={purchase}>Purchase</button>
+      <button className="purchase-button" onClick={purchase}>Purchase</button>
     </div>
   )
 

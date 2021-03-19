@@ -4,6 +4,10 @@ li{
   display: flex;
 }
 
+.nav-container{
+  /* background-color: #FFC17A; */
+}
+
 /* .search{
   border-radius: 50px;
   width: 1000px;
@@ -28,9 +32,6 @@ li{
   font-family: 'Shippori Mincho B1', serif;
 }
 
-.demo-container{
-
-}
 
 .demo-login{
   margin: 15px 10px;
