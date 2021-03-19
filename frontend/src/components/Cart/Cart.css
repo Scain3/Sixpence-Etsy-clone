@@ -29,3 +29,19 @@
     font-family: 'Shippori Mincho B1', serif;
     text-align: center;
 }
+
+.confirm-purchase-div{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #DAEFB3
+}
+
+.confirm-purchase-greeting, .confirm-purchase-heading, .confirm-purchase-paragraph{
+    margin: 10px auto;
+}
+
+.confirm-purchase-heading{
+    color: #182825;
+}
